@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="중요한 날짜를 D-Day로 관리하세요. 생일, 기념일, 시험일 카운트다운">
+  <meta name="theme-color" content="#3498db">
+  <title>D-Day 카운터</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="app-title">
+        <span class="emoji">📅</span>
+        D-Day 카운터
+      </h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 메인 컨텐츠 -->
+  <main class="main-container">
+    <!-- 이벤트 추가 버튼 -->
+    <section class="add-section">
+      <button class="add-btn" id="addEventBtn">
+        <span class="btn-icon">+</span>
+        <span>새 이벤트 추가</span>
+      </button>
+    </section>
+
+    <!-- 이벤트 추가 폼 (숨김) -->
+    <section class="form-section hidden" id="formSection">
+      <div class="form-card">
+        <h2 class="form-title">이벤트 추가</h2>
+        <form id="eventForm">
+          <div class="form-group">
+            <label for="eventName">이벤트 이름</label>
+            <input
+              type="text"
+              id="eventName"
+              class="input-field"
+              placeholder="예: 생일, 시험, 여행"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="eventDate">날짜</label>
+            <input
+              type="date"
+              id="eventDate"
+              class="input-field"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="eventCategory">카테고리</label>
+            <select id="eventCategory" class="select-field">
+              <option value="birthday">🎂 생일</option>
+              <option value="anniversary">💝 기념일</option>
+              <option value="exam">📝 시험</option>
+              <option value="travel">✈️ 여행</option>
+              <option value="work">💼 업무</option>
+              <option value="other">📌 기타</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="eventRepeat" class="checkbox">
+              매년 반복 (생일, 기념일 등)
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="cancelBtn">
+              취소
+            </button>
+            <button type="submit" class="btn-primary">
+              저장
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 정렬 옵션 -->
+    <section class="sort-section">
+      <div class="sort-buttons">
+        <button class="sort-btn active" data-sort="closest">
+          가까운 순
+        </button>
+        <button class="sort-btn" data-sort="farthest">
+          먼 순
+        </button>
+        <button class="sort-btn" data-sort="recent">
+          최근 추가
+        </button>
+      </div>
+    </section>
+
+    <!-- 이벤트 리스트 -->
+    <section class="events-section">
+      <div class="events-container" id="eventsContainer">
+        <p class="empty-message">아직 등록된 이벤트가 없습니다.<br>새 이벤트를 추가해보세요!</p>
+      </div>
+    </section>
+
+    <!-- 통계 -->
+    <section class="stats-section">
+      <h2 class="section-title">통계</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-value" id="totalEvents">0</div>
+          <div class="stat-label">전체 이벤트</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⏰</div>
+          <div class="stat-value" id="upcomingEvents">0</div>
+          <div class="stat-label">다가오는 이벤트</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value" id="passedEvents">0</div>
+          <div class="stat-label">지난 이벤트</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <p>중요한 날짜를 놓치지 마세요 ⏰</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
