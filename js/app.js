@@ -198,6 +198,9 @@ class DdayApp {
             </div>
           </div>
           <div class="event-actions">
+            <button class="action-btn edit" onclick="app.editEvent(${event.id})" title="수정">
+              ✏️
+            </button>
             <button class="action-btn delete" onclick="app.deleteEvent(${event.id})" title="삭제">
               🗑️
             </button>
@@ -287,7 +290,145 @@ class DdayApp {
     const formSection = document.getElementById('formSection');
     formSection.classList.add('hidden');
     document.getElementById('eventForm').reset();
+    document.querySelector('.form-title').textContent = '이벤트 추가';
     this.editingId = null;
+  }
+
+  // 이벤트 편집
+  editEvent(id) {
+    const event = this.events.find(e => e.id === id);
+    if (!event) return;
+
+    this.editingId = id;
+
+    document.getElementById('eventName').value = event.name;
+    document.getElementById('eventDate').value = event.date;
+    document.getElementById('eventCategory').value = event.category;
+    document.getElementById('eventRepeat').checked = event.repeat || false;
+
+    document.querySelector('.form-title').textContent = '이벤트 수정';
+
+    const formSection = document.getElementById('formSection');
+    formSection.classList.remove('hidden');
+    formSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // 전면 광고 표시
+  showInterstitialAd() {
+    return new Promise((resolve) => {
+      const overlay = document.getElementById('interstitialAd');
+      const closeBtn = document.getElementById('closeAdBtn');
+      const countdown = document.getElementById('adCountdown');
+
+      overlay.classList.remove('hidden');
+      closeBtn.disabled = true;
+      let seconds = 5;
+      countdown.textContent = seconds;
+
+      const timer = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          closeBtn.disabled = false;
+          closeBtn.textContent = '닫기';
+        }
+      }, 1000);
+
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.add('hidden');
+        closeBtn.disabled = true;
+        countdown.textContent = '5';
+        resolve();
+      }, { once: true });
+    });
+  }
+
+  // 프리미엄 콘텐츠
+  async showPremiumContent() {
+    if (this.events.length === 0) {
+      alert('먼저 이벤트를 추가해주세요.');
+      return;
+    }
+
+    await this.showInterstitialAd();
+
+    const premiumBody = document.getElementById('premiumBody');
+
+    // 이벤트 분석
+    const upcomingEvents = this.events
+      .map(e => ({
+        ...e,
+        days: this.calculateDday(e.repeat ? this.getRepeatDate(e.date) : e.date)
+      }))
+      .filter(e => e.days >= 0)
+      .sort((a, b) => a.days - b.days);
+
+    const passedEvents = this.events
+      .map(e => ({
+        ...e,
+        days: this.calculateDday(e.date)
+      }))
+      .filter(e => e.days < 0);
+
+    const nearest = upcomingEvents[0];
+    const categoryCount = {};
+    this.events.forEach(e => {
+      categoryCount[e.category] = (categoryCount[e.category] || 0) + 1;
+    });
+
+    const mostCategory = Object.entries(categoryCount).sort((a, b) => b[1] - a[1])[0];
+
+    const tips = [
+      '목표까지 남은 날을 주 단위로 나누면 계획을 세우기 더 쉬워집니다.',
+      '중요한 이벤트 1주 전에 미리 체크리스트를 만들어보세요.',
+      'D-Day까지 매일 작은 준비를 하면 마지막에 여유를 가질 수 있습니다.',
+      '지난 이벤트를 돌아보면서 다음에는 더 나은 준비를 할 수 있습니다.',
+      '반복 이벤트를 설정하면 매년 중요한 날을 놓치지 않을 수 있습니다.'
+    ];
+
+    premiumBody.innerHTML = `
+      ${nearest ? `
+        <div class="premium-highlight">
+          <h3>가장 가까운 이벤트</h3>
+          <div class="premium-dday-card">
+            <span class="premium-dday-value">${this.formatDday(nearest.days)}</span>
+            <span class="premium-dday-name">${nearest.name}</span>
+            <span class="premium-dday-date">${this.formatDate(nearest.repeat ? this.getRepeatDate(nearest.date) : nearest.date)}</span>
+          </div>
+          ${nearest.days > 0 ? `
+            <p class="premium-weeks">약 <strong>${Math.ceil(nearest.days / 7)}주</strong> 남았습니다 (${nearest.days}일)</p>
+          ` : '<p class="premium-today">오늘이 바로 그 날입니다!</p>'}
+        </div>
+      ` : ''}
+
+      <div class="premium-analysis-item">
+        <h3>이벤트 통계</h3>
+        <p>전체: ${this.events.length}개 / 다가오는: ${upcomingEvents.length}개 / 지난: ${passedEvents.length}개</p>
+        ${mostCategory ? `<p>가장 많은 카테고리: ${this.getCategoryEmoji(mostCategory[0])} ${this.getCategoryName(mostCategory[0])} (${mostCategory[1]}개)</p>` : ''}
+      </div>
+
+      <div class="premium-analysis-item">
+        <h3>AI 시간 관리 팁</h3>
+        <p>${tips[Math.floor(Math.random() * tips.length)]}</p>
+      </div>
+
+      ${upcomingEvents.length > 1 ? `
+        <div class="premium-analysis-item">
+          <h3>다가오는 이벤트 타임라인</h3>
+          <div class="premium-timeline">
+            ${upcomingEvents.slice(0, 5).map(e => `
+              <div class="timeline-item">
+                <span class="timeline-dday">${this.formatDday(e.days)}</span>
+                <span class="timeline-name">${this.getCategoryEmoji(e.category)} ${e.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+    `;
+
+    document.getElementById('premiumModal').classList.remove('hidden');
   }
 
   // 테마 설정
@@ -348,11 +489,30 @@ class DdayApp {
     document.getElementById('themeToggle').addEventListener('click', () => {
       this.toggleTheme();
     });
+
+    // 프리미엄 버튼
+    document.getElementById('premiumBtn').addEventListener('click', () => {
+      this.showPremiumContent();
+    });
+
+    // 프리미엄 모달 닫기
+    document.getElementById('closePremiumBtn').addEventListener('click', () => {
+      document.getElementById('premiumModal').classList.add('hidden');
+    });
   }
 }
 
 // 앱 초기화
 const app = new DdayApp();
+
+// Service Worker 등록
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => console.log('SW registered:', reg.scope))
+      .catch((err) => console.log('SW registration failed:', err));
+  });
+}
 
 // PWA 설치 프롬프트
 let deferredPrompt;

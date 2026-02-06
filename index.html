@@ -24,6 +24,11 @@
     </div>
   </header>
 
+  <!-- 광고 영역 (상단) -->
+  <div class="ad-banner ad-top">
+    <span class="ad-placeholder">광고 영역</span>
+  </div>
+
   <!-- 메인 컨텐츠 -->
   <main class="main-container">
     <!-- 이벤트 추가 버튼 -->
@@ -113,6 +118,15 @@
       </div>
     </section>
 
+    <!-- 프리미엄 분석 버튼 -->
+    <section class="premium-section" id="premiumSection">
+      <button class="premium-btn" id="premiumBtn">
+        <span class="premium-icon">📊</span>
+        <span>AI D-Day 심층 분석</span>
+        <span class="premium-badge">PREMIUM</span>
+      </button>
+    </section>
+
     <!-- 통계 -->
     <section class="stats-section">
       <h2 class="section-title">통계</h2>
@@ -136,10 +150,36 @@
     </section>
   </main>
 
+  <!-- 광고 영역 (하단) -->
+  <div class="ad-banner ad-bottom">
+    <span class="ad-placeholder">광고 영역</span>
+  </div>
+
   <!-- 푸터 -->
   <footer class="footer">
     <p>중요한 날짜를 놓치지 마세요 ⏰</p>
   </footer>
+
+  <!-- 전면 광고 -->
+  <div id="interstitialAd" class="interstitial-overlay hidden">
+    <div class="interstitial-content">
+      <p class="interstitial-label">광고</p>
+      <div class="ad-placeholder-large">광고 영역</div>
+      <button id="closeAdBtn" class="close-ad-btn" disabled>닫기 (<span id="adCountdown">5</span>)</button>
+    </div>
+  </div>
+
+  <!-- 프리미엄 결과 모달 -->
+  <div id="premiumModal" class="premium-modal hidden">
+    <div class="premium-modal-content">
+      <button class="premium-close" id="closePremiumBtn">&times;</button>
+      <div class="premium-header">
+        <span class="premium-modal-icon">📊</span>
+        <h2>AI D-Day 심층 분석</h2>
+      </div>
+      <div class="premium-body" id="premiumBody"></div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/app.js"></script>
