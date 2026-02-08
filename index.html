@@ -46,11 +46,18 @@
   <div class="language-selector">
     <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
     <div class="lang-menu hidden" id="langMenu">
-      <button class="lang-option" data-lang="ko">한국어</button>
-      <button class="lang-option" data-lang="en">English</button>
-      <button class="lang-option" data-lang="zh">简体中文</button>
-      <button class="lang-option" data-lang="hi">हिन्दी</button>
-      <button class="lang-option" data-lang="ru">Русский</button>
+      <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+      <button class="lang-option" data-lang="en">🇺🇸 English</button>
+      <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+      <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+      <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
+      <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+      <button class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+      <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+      <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+      <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+      <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+      <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
     </div>
   </div>
 
@@ -69,7 +76,7 @@
 
   <!-- 광고 영역 (상단) -->
   <div class="ad-banner ad-top">
-    <span class="ad-placeholder">광고 영역</span>
+    <span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span>
   </div>
 
   <!-- 메인 컨텐츠 -->
@@ -155,6 +162,12 @@
       </div>
     </section>
 
+    <!-- 미니 캘린더 -->
+    <section class="calendar-section">
+      <h2 class="section-title" data-i18n="calendar.title">📅 이번 달 일정</h2>
+      <div id="miniCalendar" class="mini-calendar"></div>
+    </section>
+
     <!-- 이벤트 리스트 -->
     <section class="events-section">
       <div class="events-container" id="eventsContainer">
@@ -195,7 +208,7 @@
 
     <!-- 크로스 프로모션 섹션 -->
     <div class="recommendations-section">
-      <div class="rec-title">이것도 해보세요</div>
+      <div class="rec-title" data-i18n="rec.title">이것도 해보세요</div>
       <div class="rec-grid">
         <a href="https://dopabrain.com/unit-converter/" class="rec-card" target="_blank">
           <span class="rec-icon">📐</span>
@@ -231,7 +244,7 @@
 
   <!-- 광고 영역 (하단) -->
   <div class="ad-banner ad-bottom">
-    <span class="ad-placeholder">광고 영역</span>
+    <span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span>
   </div>
 
   <!-- 푸터 -->
@@ -242,9 +255,9 @@
   <!-- 전면 광고 -->
   <div id="interstitialAd" class="interstitial-overlay hidden">
     <div class="interstitial-content">
-      <p class="interstitial-label">광고</p>
-      <div class="ad-placeholder-large">광고 영역</div>
-      <button id="closeAdBtn" class="close-ad-btn" disabled>닫기 (<span id="adCountdown">5</span>)</button>
+      <p class="interstitial-label" data-i18n="ads.interstitial">광고</p>
+      <div class="ad-placeholder-large" data-i18n="ads.banner">광고 영역</div>
+      <button id="closeAdBtn" class="close-ad-btn" disabled><span data-i18n="ads.close">닫기</span> (<span id="adCountdown">5</span>)</button>
     </div>
   </div>
 

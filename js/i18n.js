@@ -1,7 +1,7 @@
 class I18n {
     constructor() {
         this.translations = {};
-        this.supportedLanguages = ['ko', 'en', 'zh', 'hi', 'ru'];
+        this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.currentLang = this.detectLanguage();
     }
     detectLanguage() {
@@ -43,7 +43,20 @@ class I18n {
     }
     getCurrentLanguage() { return this.currentLang; }
     getLanguageName(lang) {
-        const names = { 'ko': '한국어', 'en': 'English', 'zh': '简体中文', 'hi': 'हिन्दी', 'ru': 'Русский' };
+        const names = {
+            'ko': '한국어',
+            'en': 'English',
+            'ja': '日本語',
+            'es': 'Español',
+            'pt': 'Português',
+            'zh': '简体中文',
+            'id': 'Bahasa Indonesia',
+            'tr': 'Türkçe',
+            'de': 'Deutsch',
+            'fr': 'Français',
+            'hi': 'हिन्दी',
+            'ru': 'Русский'
+        };
         return names[lang] || lang;
     }
 }

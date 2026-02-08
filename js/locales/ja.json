@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "D-Day カウンター - 重要な日付を管理 | DopaBrain",
+    "description": "重要な日付を忘れない！無制限のイベント登録、定期リマインダー、カテゴリー管理。最も直感的なDDayカウンター。"
+  },
+  "header": {
+    "title": "D-Dayカウンター",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "新しいイベントを追加"
+  },
+  "form": {
+    "title": "イベント追加",
+    "editTitle": "イベントを編集",
+    "eventName": "イベント名",
+    "eventNamePlaceholder": "例：誕生日、試験、旅行",
+    "eventDate": "日付",
+    "eventCategory": "カテゴリー",
+    "categories": {
+      "birthday": "🎂 誕生日",
+      "anniversary": "💝 記念日",
+      "exam": "📝 試験",
+      "travel": "✈️ 旅行",
+      "work": "💼 仕事",
+      "other": "📌 その他"
+    },
+    "repeatLabel": "毎年繰り返す（誕生日、記念日）",
+    "cancel": "キャンセル",
+    "save": "保存"
+  },
+  "sort": {
+    "closest": "近い順",
+    "farthest": "遠い順",
+    "recent": "最近追加"
+  },
+  "events": {
+    "empty": "まだイベントが登録されていません。<br>新しいイベントを追加して始めましょう！",
+    "remainDays": "残り日数",
+    "edit": "編集",
+    "delete": "削除",
+    "categoryNames": {
+      "birthday": "誕生日",
+      "anniversary": "記念日",
+      "exam": "試験",
+      "travel": "旅行",
+      "work": "仕事",
+      "other": "その他"
+    }
+  },
+  "premium": {
+    "button": "AI D-Day深い分析",
+    "title": "AI D-Day深い分析",
+    "nearestEvent": "最も近いイベント",
+    "stats": "イベント統計",
+    "tips": "AI時間管理のコツ",
+    "timeline": "今後のイベントタイムライン",
+    "weeksRemaining": "残り約<strong>{weeks}週間</strong>（{days}日）",
+    "today": "今日がその日です！",
+    "total": "合計",
+    "upcoming": "今後",
+    "passed": "終了済み",
+    "mostCategory": "最も多いカテゴリー",
+    "tipsList": [
+      "日数を週で割ると計画が立てやすくなります。",
+      "重要なイベントの1週間前にチェックリストを作成します。",
+      "日々の小さな準備が直前の焦りを軽減します。",
+      "過去のイベントを振り返り、次の準備に活かします。",
+      "毎年のリマインダーを設定して、重要な日を絶対に忘れません。"
+    ]
+  },
+  "stats": {
+    "title": "統計",
+    "totalEvents": "イベント総数",
+    "upcomingEvents": "今後のイベント",
+    "passedEvents": "終了済みイベント"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "重要な日を忘れずに ⏰"
+  },
+  "messages": {
+    "confirm": "このイベントを削除してもよろしいですか？",
+    "addEventFirst": "先にイベントを追加してください。"
+  },
+  "calendar": {
+    "title": "📅 今月のスケジュール"
+  },
+  "rec": {
+    "title": "こちらも試してみてください"
+  },
+  "ads": {
+    "banner": "広告",
+    "interstitial": "広告",
+    "close": "閉じる"
+  }
+}

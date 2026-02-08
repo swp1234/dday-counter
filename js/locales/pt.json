@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "Contador de D-Day - Gerencie Datas Importantes | Contagem Regressiva para Aniversários, Provas e Comemorados",
+    "description": "Nunca perca datas importantes! Registro ilimitado de eventos, lembretes repetidos, gerenciamento de categorias. O contador D-Day mais intuitivo."
+  },
+  "header": {
+    "title": "Contador de D-Day",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Adicionar Novo Evento"
+  },
+  "form": {
+    "title": "Adicionar Evento",
+    "editTitle": "Editar Evento",
+    "eventName": "Nome do Evento",
+    "eventNamePlaceholder": "Ex: Aniversário, Prova, Viagem",
+    "eventDate": "Data",
+    "eventCategory": "Categoria",
+    "categories": {
+      "birthday": "🎂 Aniversário",
+      "anniversary": "💝 Aniversário de Casamento",
+      "exam": "📝 Prova",
+      "travel": "✈️ Viagem",
+      "work": "💼 Trabalho",
+      "other": "📌 Outro"
+    },
+    "repeatLabel": "Repetir Anualmente (Aniversários, Aniversários de Casamento)",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "sort": {
+    "closest": "Mais Próximo Primeiro",
+    "farthest": "Mais Distante Primeiro",
+    "recent": "Adicionado Recentemente"
+  },
+  "events": {
+    "empty": "Nenhum evento registrado ainda.<br>Adicione um novo evento para começar!",
+    "remainDays": "Dias Restantes",
+    "edit": "Editar",
+    "delete": "Deletar",
+    "categoryNames": {
+      "birthday": "Aniversário",
+      "anniversary": "Aniversário de Casamento",
+      "exam": "Prova",
+      "travel": "Viagem",
+      "work": "Trabalho",
+      "other": "Outro"
+    }
+  },
+  "premium": {
+    "button": "Análise Profunda de D-Day com IA",
+    "title": "Análise Profunda de D-Day com IA",
+    "nearestEvent": "Evento Mais Próximo",
+    "stats": "Estatísticas de Eventos",
+    "tips": "Dica de Gerenciamento de Tempo com IA",
+    "timeline": "Cronograma de Próximos Eventos",
+    "weeksRemaining": "Aproximadamente <strong>{weeks} semanas</strong> restantes ({days} dias)",
+    "today": "Hoje é o dia!",
+    "total": "Total",
+    "upcoming": "Próximos",
+    "passed": "Passados",
+    "mostCategory": "Categoria Mais Comum",
+    "tipsList": [
+      "Dividir dias em semanas facilita o planejamento.",
+      "Crie uma lista de verificação uma semana antes de eventos importantes.",
+      "Pequenos preparos diários reduzem o estresse de última hora.",
+      "Reflita sobre eventos passados para se preparar melhor da próxima vez.",
+      "Definir lembretes anuais garante que você nunca perca datas importantes."
+    ]
+  },
+  "stats": {
+    "title": "Estatísticas",
+    "totalEvents": "Total de Eventos",
+    "upcomingEvents": "Próximos Eventos",
+    "passedEvents": "Eventos Passados"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "Nunca perca datas importantes ⏰"
+  },
+  "messages": {
+    "confirm": "Você tem certeza que deseja deletar este evento?",
+    "addEventFirst": "Por favor, adicione um evento primeiro."
+  },
+  "calendar": {
+    "title": "📅 Calendário deste Mês"
+  },
+  "rec": {
+    "title": "Tente Também Estes"
+  },
+  "ads": {
+    "banner": "Publicidade",
+    "interstitial": "Anúncio",
+    "close": "Fechar"
+  }
+}

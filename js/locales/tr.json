@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "D-Day Sayacı - Önemli Tarihleri Yönet | Doğum Günleri, Sınavlar ve Yıldönümleri",
+    "description": "Önemli tarihleri asla kaçırma! Sınırsız etkinlik kaydı, tekrarlayan hatırlatıcılar, kategori yönetimi. En sezgisel D-Day hesaplayıcı."
+  },
+  "header": {
+    "title": "D-Day Sayacı",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Yeni Etkinlik Ekle"
+  },
+  "form": {
+    "title": "Etkinlik Ekle",
+    "editTitle": "Etkinliği Düzenle",
+    "eventName": "Etkinlik Adı",
+    "eventNamePlaceholder": "Örn: Doğum Günü, Sınav, Seyahat",
+    "eventDate": "Tarih",
+    "eventCategory": "Kategori",
+    "categories": {
+      "birthday": "🎂 Doğum Günü",
+      "anniversary": "💝 Yıldönümü",
+      "exam": "📝 Sınav",
+      "travel": "✈️ Seyahat",
+      "work": "💼 İş",
+      "other": "📌 Diğer"
+    },
+    "repeatLabel": "Her Yıl Tekrarla (Doğum Günleri, Yıldönümler)",
+    "cancel": "İptal",
+    "save": "Kaydet"
+  },
+  "sort": {
+    "closest": "En Yakın İlk",
+    "farthest": "En Uzak İlk",
+    "recent": "Son Eklenenler"
+  },
+  "events": {
+    "empty": "Henüz etkinlik kaydı yok.<br>Başlamak için yeni bir etkinlik ekle!",
+    "remainDays": "Kalan Gün",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "categoryNames": {
+      "birthday": "Doğum Günü",
+      "anniversary": "Yıldönümü",
+      "exam": "Sınav",
+      "travel": "Seyahat",
+      "work": "İş",
+      "other": "Diğer"
+    }
+  },
+  "premium": {
+    "button": "YZ D-Day Derinlemesine Analizi",
+    "title": "YZ D-Day Derinlemesine Analizi",
+    "nearestEvent": "En Yakın Etkinlik",
+    "stats": "Etkinlik İstatistikleri",
+    "tips": "YZ Zaman Yönetimi İpucu",
+    "timeline": "Yaklaşan Etkinlikler Zaman Çizelgesi",
+    "weeksRemaining": "Yaklaşık <strong>{weeks} hafta</strong> kaldı ({days} gün)",
+    "today": "Bugün o gün!",
+    "total": "Toplam",
+    "upcoming": "Yaklaşan",
+    "passed": "Geçmiş",
+    "mostCategory": "En Sık Kategori",
+    "tipsList": [
+      "Günleri haftaya bölmek planlama yapmayı kolaylaştırır.",
+      "Önemli etkinliklerden bir hafta önce bir kontrol listesi oluştur.",
+      "Günlük küçük hazırlıklar son dakika stresini azaltır.",
+      "Geçmiş etkinlikleri düşünerek daha iyi hazırlanabilirsin.",
+      "Yıllık hatırlatıcılar ayarlamak önemli tarihleri asla kaçırmanı sağlar."
+    ]
+  },
+  "stats": {
+    "title": "İstatistikler",
+    "totalEvents": "Toplam Etkinlik",
+    "upcomingEvents": "Yaklaşan Etkinlikler",
+    "passedEvents": "Geçmiş Etkinlikler"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "Önemli tarihleri asla kaçırma ⏰"
+  },
+  "messages": {
+    "confirm": "Bu etkinliği silmek istediğine emin misin?",
+    "addEventFirst": "Lütfen önce bir etkinlik ekle."
+  },
+  "calendar": {
+    "title": "📅 Bu Ayın Takvimi"
+  },
+  "rec": {
+    "title": "Bunları da Dene"
+  },
+  "ads": {
+    "banner": "Reklam",
+    "interstitial": "Reklam",
+    "close": "Kapat"
+  }
+}

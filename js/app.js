@@ -14,8 +14,52 @@ class DdayApp {
   init() {
     this.renderEvents();
     this.renderStats();
+    this.renderMiniCalendar();
     this.setupEventListeners();
     this.setupTheme();
+  }
+
+  // Mini Calendar View
+  renderMiniCalendar() {
+    const container = document.getElementById('miniCalendar');
+    if (!container) return;
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const today = now.getDate();
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Event dates this month
+    const eventDates = {};
+    this.events.forEach(ev => {
+      const d = new Date(ev.repeat ? this.getRepeatDate(ev.date) : ev.date);
+      if (d.getFullYear() === year && d.getMonth() === month) {
+        eventDates[d.getDate()] = ev.category;
+      }
+    });
+
+    const monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+    const dayNames = ['일','월','화','수','목','금','토'];
+
+    let html = `<div class="cal-header">${year}년 ${monthNames[month]}</div>`;
+    html += '<div class="cal-grid">';
+    dayNames.forEach(d => { html += `<div class="cal-day-name">${d}</div>`; });
+
+    for (let i = 0; i < firstDay; i++) {
+      html += '<div class="cal-cell empty"></div>';
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const isToday = d === today ? ' cal-today' : '';
+      const hasEvent = eventDates[d] ? ` cal-event cal-${eventDates[d]}` : '';
+      html += `<div class="cal-cell${isToday}${hasEvent}">${d}</div>`;
+    }
+
+    html += '</div>';
+    container.innerHTML = html;
   }
 
   // LocalStorage 관리

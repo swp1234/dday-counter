@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "Compteur D-Day - Gérer les Dates Importantes | Compte à Rebours pour Anniversaires, Examens et Anniversaires",
+    "description": "N'oublie jamais les dates importantes ! Enregistrement d'événements illimité, rappels répétés, gestion des catégories. Le calculateur D-Day le plus intuitif."
+  },
+  "header": {
+    "title": "Compteur D-Day",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Ajouter un Nouvel Événement"
+  },
+  "form": {
+    "title": "Ajouter un Événement",
+    "editTitle": "Modifier un Événement",
+    "eventName": "Nom de l'Événement",
+    "eventNamePlaceholder": "Par exemple, Anniversaire, Examen, Voyage",
+    "eventDate": "Date",
+    "eventCategory": "Catégorie",
+    "categories": {
+      "birthday": "🎂 Anniversaire",
+      "anniversary": "💝 Anniversaire",
+      "exam": "📝 Examen",
+      "travel": "✈️ Voyage",
+      "work": "💼 Travail",
+      "other": "📌 Autre"
+    },
+    "repeatLabel": "Répéter Annuellement (Anniversaires, Anniversaires)",
+    "cancel": "Annuler",
+    "save": "Enregistrer"
+  },
+  "sort": {
+    "closest": "Plus Proche d'Abord",
+    "farthest": "Plus Loin d'Abord",
+    "recent": "Récemment Ajouté"
+  },
+  "events": {
+    "empty": "Aucun événement enregistré encore.<br>Ajoute un nouvel événement pour commencer!",
+    "remainDays": "Jours Restants",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "categoryNames": {
+      "birthday": "Anniversaire",
+      "anniversary": "Anniversaire",
+      "exam": "Examen",
+      "travel": "Voyage",
+      "work": "Travail",
+      "other": "Autre"
+    }
+  },
+  "premium": {
+    "button": "Analyse Profonde D-Day IA",
+    "title": "Analyse Profonde D-Day IA",
+    "nearestEvent": "Événement Plus Proche",
+    "stats": "Statistiques des Événements",
+    "tips": "Conseil de Gestion du Temps IA",
+    "timeline": "Chronologie des Événements à Venir",
+    "weeksRemaining": "Environ <strong>{weeks} semaines</strong> restantes ({days} jours)",
+    "today": "Aujourd'hui c'est le jour!",
+    "total": "Total",
+    "upcoming": "À Venir",
+    "passed": "Passés",
+    "mostCategory": "Catégorie la Plus Commune",
+    "tipsList": [
+      "Diviser les jours par semaines facilite la planification.",
+      "Crée une liste de contrôle une semaine avant les événements importants.",
+      "Les petites préparations quotidiennes réduisent le stress de dernière minute.",
+      "Réfléchis aux événements passés pour te préparer mieux la prochaine fois.",
+      "Définir des rappels annuels garantit que tu ne manques jamais les dates importantes."
+    ]
+  },
+  "stats": {
+    "title": "Statistiques",
+    "totalEvents": "Événements Totaux",
+    "upcomingEvents": "Événements À Venir",
+    "passedEvents": "Événements Passés"
+  },
+  "dday": {
+    "dDay": "J-Jour",
+    "dBefore": "J-{days}",
+    "dAfter": "J+{days}"
+  },
+  "footer": {
+    "text": "N'oublie jamais les dates importantes ⏰"
+  },
+  "messages": {
+    "confirm": "Es-tu sûr de vouloir supprimer cet événement?",
+    "addEventFirst": "S'il te plaît, ajoute d'abord un événement."
+  },
+  "calendar": {
+    "title": "📅 Calendrier de Ce Mois"
+  },
+  "rec": {
+    "title": "Essaie Aussi Ceux-Ci"
+  },
+  "ads": {
+    "banner": "Publicité",
+    "interstitial": "Annonce",
+    "close": "Fermer"
+  }
+}

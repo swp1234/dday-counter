@@ -86,5 +86,16 @@
   "messages": {
     "confirm": "Are you sure you want to delete this event?",
     "addEventFirst": "Please add an event first."
+  },
+  "calendar": {
+    "title": "📅 This Month's Schedule"
+  },
+  "rec": {
+    "title": "Try These Too"
+  },
+  "ads": {
+    "banner": "Advertisement",
+    "interstitial": "Ad",
+    "close": "Close"
   }
 }

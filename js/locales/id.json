@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "Penghitung D-Day - Kelola Tanggal Penting | Hitung Mundur ke Hari Jadi, Ujian & Ulang Tahun",
+    "description": "Jangan lewatkan tanggal penting! Pendaftaran acara tak terbatas, pengingat berulang, manajemen kategori. Kalkulator D-Day paling intuitif."
+  },
+  "header": {
+    "title": "Penghitung D-Day",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Tambah Acara Baru"
+  },
+  "form": {
+    "title": "Tambah Acara",
+    "editTitle": "Edit Acara",
+    "eventName": "Nama Acara",
+    "eventNamePlaceholder": "Contoh: Ulang Tahun, Ujian, Perjalanan",
+    "eventDate": "Tanggal",
+    "eventCategory": "Kategori",
+    "categories": {
+      "birthday": "🎂 Ulang Tahun",
+      "anniversary": "💝 Hari Jadi",
+      "exam": "📝 Ujian",
+      "travel": "✈️ Perjalanan",
+      "work": "💼 Pekerjaan",
+      "other": "📌 Lainnya"
+    },
+    "repeatLabel": "Ulangi Setiap Tahun (Ulang Tahun, Hari Jadi)",
+    "cancel": "Batal",
+    "save": "Simpan"
+  },
+  "sort": {
+    "closest": "Terdekat Dulu",
+    "farthest": "Terjauh Dulu",
+    "recent": "Baru Ditambahkan"
+  },
+  "events": {
+    "empty": "Belum ada acara terdaftar.<br>Tambah acara baru untuk memulai!",
+    "remainDays": "Hari Tersisa",
+    "edit": "Edit",
+    "delete": "Hapus",
+    "categoryNames": {
+      "birthday": "Ulang Tahun",
+      "anniversary": "Hari Jadi",
+      "exam": "Ujian",
+      "travel": "Perjalanan",
+      "work": "Pekerjaan",
+      "other": "Lainnya"
+    }
+  },
+  "premium": {
+    "button": "Analisis Mendalam D-Day AI",
+    "title": "Analisis Mendalam D-Day AI",
+    "nearestEvent": "Acara Terdekat",
+    "stats": "Statistik Acara",
+    "tips": "Tips Manajemen Waktu AI",
+    "timeline": "Garis Waktu Acara Mendatang",
+    "weeksRemaining": "Sekitar <strong>{weeks} minggu</strong> tersisa ({days} hari)",
+    "today": "Hari ini adalah harinya!",
+    "total": "Total",
+    "upcoming": "Mendatang",
+    "passed": "Berlalu",
+    "mostCategory": "Kategori Paling Umum",
+    "tipsList": [
+      "Membagi hari menjadi minggu membuat perencanaan lebih mudah.",
+      "Buat daftar periksa seminggu sebelum acara penting.",
+      "Persiapan kecil setiap hari mengurangi stres menit terakhir.",
+      "Renungkan acara masa lalu untuk mempersiapkan diri lebih baik lagi.",
+      "Mengatur pengingat tahunan memastikan Anda tidak pernah melewatkan tanggal penting."
+    ]
+  },
+  "stats": {
+    "title": "Statistik",
+    "totalEvents": "Total Acara",
+    "upcomingEvents": "Acara Mendatang",
+    "passedEvents": "Acara Berlalu"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "Jangan lewatkan tanggal penting ⏰"
+  },
+  "messages": {
+    "confirm": "Apakah Anda yakin ingin menghapus acara ini?",
+    "addEventFirst": "Silakan tambah acara terlebih dahulu."
+  },
+  "calendar": {
+    "title": "📅 Jadwal Bulan Ini"
+  },
+  "rec": {
+    "title": "Coba Juga Ini"
+  },
+  "ads": {
+    "banner": "Iklan",
+    "interstitial": "Iklan",
+    "close": "Tutup"
+  }
+}

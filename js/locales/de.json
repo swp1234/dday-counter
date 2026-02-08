@@ -1,0 +1,101 @@
+{
+  "app": {
+    "title": "D-Day Zähler - Wichtige Daten verwalten | Countdown zu Jahrestagen, Examen & Geburtstagen",
+    "description": "Verpasse nie wichtige Daten! Unbegrenzte Ereignisregistrierung, wiederholte Erinnerungen, Kategorieverwaltung. Der intuitivste D-Day-Rechner."
+  },
+  "header": {
+    "title": "D-Day Zähler",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Neues Ereignis hinzufügen"
+  },
+  "form": {
+    "title": "Ereignis hinzufügen",
+    "editTitle": "Ereignis bearbeiten",
+    "eventName": "Ereignisname",
+    "eventNamePlaceholder": "z.B. Geburtstag, Prüfung, Reise",
+    "eventDate": "Datum",
+    "eventCategory": "Kategorie",
+    "categories": {
+      "birthday": "🎂 Geburtstag",
+      "anniversary": "💝 Jahrestag",
+      "exam": "📝 Prüfung",
+      "travel": "✈️ Reise",
+      "work": "💼 Arbeit",
+      "other": "📌 Sonstiges"
+    },
+    "repeatLabel": "Jährlich wiederholen (Geburtstage, Jahrestage)",
+    "cancel": "Abbrechen",
+    "save": "Speichern"
+  },
+  "sort": {
+    "closest": "Nächste zuerst",
+    "farthest": "Fernste zuerst",
+    "recent": "Kürzlich hinzugefügt"
+  },
+  "events": {
+    "empty": "Noch kein Ereignis registriert.<br>Füge ein neues Ereignis hinzu um zu starten!",
+    "remainDays": "Tage verbleibend",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "categoryNames": {
+      "birthday": "Geburtstag",
+      "anniversary": "Jahrestag",
+      "exam": "Prüfung",
+      "travel": "Reise",
+      "work": "Arbeit",
+      "other": "Sonstiges"
+    }
+  },
+  "premium": {
+    "button": "KI D-Day Tiefenanalyse",
+    "title": "KI D-Day Tiefenanalyse",
+    "nearestEvent": "Nächstes Ereignis",
+    "stats": "Ereignisstatistik",
+    "tips": "KI Zeitmanagement-Tipp",
+    "timeline": "Kommende Ereignisse-Zeitleiste",
+    "weeksRemaining": "Ungefähr <strong>{weeks} Wochen</strong> verbleibend ({days} Tage)",
+    "today": "Heute ist der Tag!",
+    "total": "Gesamt",
+    "upcoming": "Kommend",
+    "passed": "Vergangen",
+    "mostCategory": "Häufigste Kategorie",
+    "tipsList": [
+      "Die Division von Tagen in Wochen macht die Planung einfacher.",
+      "Erstelle eine Checkliste eine Woche vor wichtigen Ereignissen.",
+      "Tägliche kleine Vorbereitungen reduzieren Stress in letzter Minute.",
+      "Reflektiere über vergangene Ereignisse um besser für die nächste Zeit vorbereitet zu sein.",
+      "Das Setzen von jährlichen Erinnerungen stellt sicher, dass du nie wichtige Daten vergisst."
+    ]
+  },
+  "stats": {
+    "title": "Statistik",
+    "totalEvents": "Gesamte Ereignisse",
+    "upcomingEvents": "Kommende Ereignisse",
+    "passedEvents": "Vergangene Ereignisse"
+  },
+  "dday": {
+    "dDay": "D-Tag",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "Verpasse nie wichtige Daten ⏰"
+  },
+  "messages": {
+    "confirm": "Bist du sicher, dass du dieses Ereignis löschen möchtest?",
+    "addEventFirst": "Bitte füge zuerst ein Ereignis hinzu."
+  },
+  "calendar": {
+    "title": "📅 Kalender Dieses Monats"
+  },
+  "rec": {
+    "title": "Probiere Auch Diese"
+  },
+  "ads": {
+    "banner": "Werbung",
+    "interstitial": "Anzeige",
+    "close": "Schließen"
+  }
+}
