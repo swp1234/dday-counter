@@ -338,7 +338,7 @@ d-day, countdown, anniversary, birthday, event tracker, date counter, count-up, 
 - 욕설: 없음
 
 **개인정보 처리방침**:
-- URL: https://swp1234.github.io/dday-counter/privacy-policy.html
+- URL: https://dopabrain.com/dday-counter/privacy-policy.html
 - 수집 정보: 없음 (로컬 저장소만 사용)
 - 연락처: woodori1234@gmail.com
 
@@ -378,7 +378,7 @@ d-day, countdown, anniversary, birthday, event tracker, date counter, count-up, 
    - 도메인 소유권 검증
 
 3. **manifest.xml 설정**
-   - TWA URL: https://swp1234.github.io/dday-counter/
+   - TWA URL: https://dopabrain.com/dday-counter/
    - Theme color: #3498db
    - App name (각 언어별 values 폴더)
      - `values/strings.xml`: D-Day 카운터
