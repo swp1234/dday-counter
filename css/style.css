@@ -579,6 +579,29 @@ body {
   border-top: 1px solid var(--border);
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 12px 0;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.light-theme .back-link {
+  color: rgba(44, 62, 80, 0.4);
+}
+
+.light-theme .back-link:hover {
+  color: rgba(44, 62, 80, 0.7);
+}
+
 /* Ad Banner */
 .ad-banner {
   background: var(--bg-secondary);
