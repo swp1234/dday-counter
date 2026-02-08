@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "D-Day 카운터 - 중요한 날짜 관리 | 기념일·시험·생일 카운트다운",
+    "description": "생일, 기념일, 시험일을 놓치지 마세요! 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기."
+  },
+  "header": {
+    "title": "D-Day 카운터",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "새 이벤트 추가"
+  },
+  "form": {
+    "title": "이벤트 추가",
+    "editTitle": "이벤트 수정",
+    "eventName": "이벤트 이름",
+    "eventNamePlaceholder": "예: 생일, 시험, 여행",
+    "eventDate": "날짜",
+    "eventCategory": "카테고리",
+    "categories": {
+      "birthday": "🎂 생일",
+      "anniversary": "💝 기념일",
+      "exam": "📝 시험",
+      "travel": "✈️ 여행",
+      "work": "💼 업무",
+      "other": "📌 기타"
+    },
+    "repeatLabel": "매년 반복 (생일, 기념일 등)",
+    "cancel": "취소",
+    "save": "저장"
+  },
+  "sort": {
+    "closest": "가까운 순",
+    "farthest": "먼 순",
+    "recent": "최근 추가"
+  },
+  "events": {
+    "empty": "아직 등록된 이벤트가 없습니다.<br>새 이벤트를 추가해보세요!",
+    "remainDays": "남은 날짜",
+    "edit": "수정",
+    "delete": "삭제",
+    "categoryNames": {
+      "birthday": "생일",
+      "anniversary": "기념일",
+      "exam": "시험",
+      "travel": "여행",
+      "work": "업무",
+      "other": "기타"
+    }
+  },
+  "premium": {
+    "button": "AI D-Day 심층 분석",
+    "title": "AI D-Day 심층 분석",
+    "nearestEvent": "가장 가까운 이벤트",
+    "stats": "이벤트 통계",
+    "tips": "AI 시간 관리 팁",
+    "timeline": "다가오는 이벤트 타임라인",
+    "weeksRemaining": "약 <strong>{weeks}주</strong> 남았습니다 ({days}일)",
+    "today": "오늘이 바로 그 날입니다!",
+    "total": "전체",
+    "upcoming": "다가오는",
+    "passed": "지난",
+    "mostCategory": "가장 많은 카테고리",
+    "tipsList": [
+      "목표까지 남은 날을 주 단위로 나누면 계획을 세우기 더 쉬워집니다.",
+      "중요한 이벤트 1주 전에 미리 체크리스트를 만들어보세요.",
+      "D-Day까지 매일 작은 준비를 하면 마지막에 여유를 가질 수 있습니다.",
+      "지난 이벤트를 돌아보면서 다음에는 더 나은 준비를 할 수 있습니다.",
+      "반복 이벤트를 설정하면 매년 중요한 날을 놓치지 않을 수 있습니다."
+    ]
+  },
+  "stats": {
+    "title": "통계",
+    "totalEvents": "전체 이벤트",
+    "upcomingEvents": "다가오는 이벤트",
+    "passedEvents": "지난 이벤트"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "중요한 날짜를 �치지 마세요 ⏰"
+  },
+  "messages": {
+    "confirm": "이 이벤트를 삭제하시겠습니까?",
+    "addEventFirst": "먼저 이벤트를 추가해주세요."
+  }
+}

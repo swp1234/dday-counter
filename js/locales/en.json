@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "D-Day Counter - Manage Important Dates | Countdown to Anniversaries, Exams & Birthdays",
+    "description": "Never miss important dates! Unlimited event registration, repeat reminders, category management. The most intuitive D-Day calculator."
+  },
+  "header": {
+    "title": "D-Day Counter",
+    "emoji": "📅"
+  },
+  "addSection": {
+    "button": "Add New Event"
+  },
+  "form": {
+    "title": "Add Event",
+    "editTitle": "Edit Event",
+    "eventName": "Event Name",
+    "eventNamePlaceholder": "e.g., Birthday, Exam, Travel",
+    "eventDate": "Date",
+    "eventCategory": "Category",
+    "categories": {
+      "birthday": "🎂 Birthday",
+      "anniversary": "💝 Anniversary",
+      "exam": "📝 Exam",
+      "travel": "✈️ Travel",
+      "work": "💼 Work",
+      "other": "📌 Other"
+    },
+    "repeatLabel": "Repeat Yearly (Birthdays, Anniversaries)",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "sort": {
+    "closest": "Closest First",
+    "farthest": "Farthest First",
+    "recent": "Recently Added"
+  },
+  "events": {
+    "empty": "No events registered yet.<br>Add a new event to get started!",
+    "remainDays": "Days Left",
+    "edit": "Edit",
+    "delete": "Delete",
+    "categoryNames": {
+      "birthday": "Birthday",
+      "anniversary": "Anniversary",
+      "exam": "Exam",
+      "travel": "Travel",
+      "work": "Work",
+      "other": "Other"
+    }
+  },
+  "premium": {
+    "button": "AI D-Day Deep Analysis",
+    "title": "AI D-Day Deep Analysis",
+    "nearestEvent": "Nearest Event",
+    "stats": "Event Statistics",
+    "tips": "AI Time Management Tip",
+    "timeline": "Upcoming Events Timeline",
+    "weeksRemaining": "About <strong>{weeks} weeks</strong> remaining ({days} days)",
+    "today": "Today is the day!",
+    "total": "Total",
+    "upcoming": "Upcoming",
+    "passed": "Passed",
+    "mostCategory": "Most Common Category",
+    "tipsList": [
+      "Dividing days by weeks makes planning easier.",
+      "Create a checklist one week before important events.",
+      "Daily small preparations reduce last-minute stress.",
+      "Reflect on past events to prepare better next time.",
+      "Setting yearly reminders ensures you never miss important dates."
+    ]
+  },
+  "stats": {
+    "title": "Statistics",
+    "totalEvents": "Total Events",
+    "upcomingEvents": "Upcoming Events",
+    "passedEvents": "Passed Events"
+  },
+  "dday": {
+    "dDay": "D-Day",
+    "dBefore": "D-{days}",
+    "dAfter": "D+{days}"
+  },
+  "footer": {
+    "text": "Never miss important dates ⏰"
+  },
+  "messages": {
+    "confirm": "Are you sure you want to delete this event?",
+    "addEventFirst": "Please add an event first."
+  }
+}

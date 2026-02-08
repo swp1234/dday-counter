@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="max-image-preview:large">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
-  <meta name="description" content="생일, 기념일, 시험일을 놓치지 마세요! 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기.">
+  <meta name="description" data-i18n="app.description" content="생일, 기념일, 시험일을 놓치지 마세요! 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기.">
   <meta name="keywords" content="D-Day 계산기, 디데이 카운터, 날짜 계산, 기념일 계산, 시험 디데이, 생일 카운트다운, 중요한 날짜, 반복 이벤트">
   <meta name="theme-color" content="#3498db">
-  <title>D-Day 카운터 - 중요한 날짜 관리 | 기념일·시험·생일 카운트다운</title>
+  <title data-i18n="app.title">D-Day 카운터 - 중요한 날짜 관리 | 기념일·시험·생일 카운트다운</title>
   <link rel="canonical" href="https://dopabrain.com/dday-counter/">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
@@ -42,12 +42,24 @@
     </script>
 </head>
 <body>
+  <!-- 언어 선택기 -->
+  <div class="language-selector">
+    <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
+    <div class="lang-menu hidden" id="langMenu">
+      <button class="lang-option" data-lang="ko">한국어</button>
+      <button class="lang-option" data-lang="en">English</button>
+      <button class="lang-option" data-lang="zh">简体中文</button>
+      <button class="lang-option" data-lang="hi">हिन्दी</button>
+      <button class="lang-option" data-lang="ru">Русский</button>
+    </div>
+  </div>
+
   <!-- 헤더 -->
   <header class="header">
     <div class="header-content">
       <h1 class="app-title">
-        <span class="emoji">📅</span>
-        D-Day 카운터
+        <span class="emoji" data-i18n="header.emoji">📅</span>
+        <span data-i18n="header.title">D-Day 카운터</span>
       </h1>
       <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
         <span class="theme-icon">🌙</span>
@@ -66,28 +78,29 @@
     <section class="add-section">
       <button class="add-btn" id="addEventBtn">
         <span class="btn-icon">+</span>
-        <span>새 이벤트 추가</span>
+        <span data-i18n="addSection.button">새 이벤트 추가</span>
       </button>
     </section>
 
     <!-- 이벤트 추가 폼 (숨김) -->
     <section class="form-section hidden" id="formSection">
       <div class="form-card">
-        <h2 class="form-title">이벤트 추가</h2>
+        <h2 class="form-title" data-i18n="form.title">이벤트 추가</h2>
         <form id="eventForm">
           <div class="form-group">
-            <label for="eventName">이벤트 이름</label>
+            <label for="eventName" data-i18n="form.eventName">이벤트 이름</label>
             <input
               type="text"
               id="eventName"
               class="input-field"
+              data-i18n-placeholder="form.eventNamePlaceholder"
               placeholder="예: 생일, 시험, 여행"
               required
             >
           </div>
 
           <div class="form-group">
-            <label for="eventDate">날짜</label>
+            <label for="eventDate" data-i18n="form.eventDate">날짜</label>
             <input
               type="date"
               id="eventDate"
@@ -97,29 +110,29 @@
           </div>
 
           <div class="form-group">
-            <label for="eventCategory">카테고리</label>
+            <label for="eventCategory" data-i18n="form.eventCategory">카테고리</label>
             <select id="eventCategory" class="select-field">
-              <option value="birthday">🎂 생일</option>
-              <option value="anniversary">💝 기념일</option>
-              <option value="exam">📝 시험</option>
-              <option value="travel">✈️ 여행</option>
-              <option value="work">💼 업무</option>
-              <option value="other">📌 기타</option>
+              <option value="birthday" data-i18n="form.categories.birthday">🎂 생일</option>
+              <option value="anniversary" data-i18n="form.categories.anniversary">💝 기념일</option>
+              <option value="exam" data-i18n="form.categories.exam">📝 시험</option>
+              <option value="travel" data-i18n="form.categories.travel">✈️ 여행</option>
+              <option value="work" data-i18n="form.categories.work">💼 업무</option>
+              <option value="other" data-i18n="form.categories.other">📌 기타</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>
               <input type="checkbox" id="eventRepeat" class="checkbox">
-              매년 반복 (생일, 기념일 등)
+              <span data-i18n="form.repeatLabel">매년 반복 (생일, 기념일 등)</span>
             </label>
           </div>
 
           <div class="form-actions">
-            <button type="button" class="btn-secondary" id="cancelBtn">
+            <button type="button" class="btn-secondary" id="cancelBtn" data-i18n="form.cancel">
               취소
             </button>
-            <button type="submit" class="btn-primary">
+            <button type="submit" class="btn-primary" data-i18n="form.save">
               저장
             </button>
           </div>
@@ -130,13 +143,13 @@
     <!-- 정렬 옵션 -->
     <section class="sort-section">
       <div class="sort-buttons">
-        <button class="sort-btn active" data-sort="closest">
+        <button class="sort-btn active" data-sort="closest" data-i18n="sort.closest">
           가까운 순
         </button>
-        <button class="sort-btn" data-sort="farthest">
+        <button class="sort-btn" data-sort="farthest" data-i18n="sort.farthest">
           먼 순
         </button>
-        <button class="sort-btn" data-sort="recent">
+        <button class="sort-btn" data-sort="recent" data-i18n="sort.recent">
           최근 추가
         </button>
       </div>
@@ -145,7 +158,7 @@
     <!-- 이벤트 리스트 -->
     <section class="events-section">
       <div class="events-container" id="eventsContainer">
-        <p class="empty-message">아직 등록된 이벤트가 없습니다.<br>새 이벤트를 추가해보세요!</p>
+        <p class="empty-message" data-i18n="events.empty">아직 등록된 이벤트가 없습니다.<br>새 이벤트를 추가해보세요!</p>
       </div>
     </section>
 
@@ -153,29 +166,29 @@
     <section class="premium-section" id="premiumSection">
       <button class="premium-btn" id="premiumBtn">
         <span class="premium-icon">📊</span>
-        <span>AI D-Day 심층 분석</span>
+        <span data-i18n="premium.button">AI D-Day 심층 분석</span>
         <span class="premium-badge">PREMIUM</span>
       </button>
     </section>
 
     <!-- 통계 -->
     <section class="stats-section">
-      <h2 class="section-title">통계</h2>
+      <h2 class="section-title" data-i18n="stats.title">통계</h2>
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-icon">📅</div>
           <div class="stat-value" id="totalEvents">0</div>
-          <div class="stat-label">전체 이벤트</div>
+          <div class="stat-label" data-i18n="stats.totalEvents">전체 이벤트</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">⏰</div>
           <div class="stat-value" id="upcomingEvents">0</div>
-          <div class="stat-label">다가오는 이벤트</div>
+          <div class="stat-label" data-i18n="stats.upcomingEvents">다가오는 이벤트</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">✅</div>
           <div class="stat-value" id="passedEvents">0</div>
-          <div class="stat-label">지난 이벤트</div>
+          <div class="stat-label" data-i18n="stats.passedEvents">지난 이벤트</div>
         </div>
       </div>
     </section>
@@ -223,7 +236,7 @@
 
   <!-- 푸터 -->
   <footer class="footer">
-    <p>중요한 날짜를 놓치지 마세요 ⏰</p>
+    <p data-i18n="footer.text">중요한 날짜를 놓치지 마세요 ⏰</p>
   </footer>
 
   <!-- 전면 광고 -->
@@ -241,13 +254,42 @@
       <button class="premium-close" id="closePremiumBtn">&times;</button>
       <div class="premium-header">
         <span class="premium-modal-icon">📊</span>
-        <h2>AI D-Day 심층 분석</h2>
+        <h2 data-i18n="premium.title">AI D-Day 심층 분석</h2>
       </div>
       <div class="premium-body" id="premiumBody"></div>
     </div>
   </div>
 
   <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script>
+    // Initialize i18n
+    (async () => {
+      await i18n.loadTranslations(i18n.currentLang);
+      i18n.updateUI();
+
+      // Language selector
+      const langBtn = document.getElementById('langBtn');
+      const langMenu = document.getElementById('langMenu');
+
+      langBtn.addEventListener('click', () => {
+        langMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('[data-lang]').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const lang = e.target.getAttribute('data-lang');
+          await i18n.setLanguage(lang);
+          document.querySelectorAll('[data-lang]').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          langMenu.classList.add('hidden');
+        });
+        if (btn.getAttribute('data-lang') === i18n.currentLang) {
+          btn.classList.add('active');
+        }
+      });
+    })();
+  </script>
   <script src="js/app.js"></script>
 </body>
 </html>
