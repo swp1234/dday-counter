@@ -1105,5 +1105,36 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 .skip-link:focus{top:0;}
 [role="dialog"]{z-index:1000;}
 @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark, var(--bg-primary, var(--background, #0f0f23)));
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 5px;
+    border: 2px solid var(--bg-dark, var(--bg-primary, var(--background, #0f0f23)));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5cace2;
+    opacity: 0.8;
+}
+
+/* Selection Color */
+::selection {
+    background: #3498db;
+    color: white;
+}
+
+::-moz-selection {
+    background: #3498db;
+    color: white;
+}
+
 @media (prefers-contrast: more){button{border:2px solid #3498db;}}
 .rec-card:focus-visible,.dday-item:focus-visible{outline:3px solid #3498db;outline-offset:4px;}
