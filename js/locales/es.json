@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Contador D-Day - Administra Fechas Importantes | Cuenta Regresiva a Aniversarios, Exámenes y Cumpleaños",
-    "description": "¡Nunca pierdas fechas importantes! Registro ilimitado de eventos, recordatorios repetidos, gestión de categorías. El contador D-Day más intuitivo."
+    "description": "¡Nunca pierdas fechas importantes! Registro ilimitado de eventos, recordatorios repetidos, gestión de categorías. El contador D-Day más intuitivo.",
+    "loading": "Cargando..."
   },
   "header": {
     "title": "Contador D-Day",

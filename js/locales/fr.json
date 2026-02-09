@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Compteur D-Day - Gérer les Dates Importantes | Compte à Rebours pour Anniversaires, Examens et Anniversaires",
-    "description": "N'oublie jamais les dates importantes ! Enregistrement d'événements illimité, rappels répétés, gestion des catégories. Le calculateur D-Day le plus intuitif."
+    "description": "N'oublie jamais les dates importantes ! Enregistrement d'événements illimité, rappels répétés, gestion des catégories. Le calculateur D-Day le plus intuitif.",
+    "loading": "Chargement..."
   },
   "header": {
     "title": "Compteur D-Day",

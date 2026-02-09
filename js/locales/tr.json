@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "D-Day Sayacı - Önemli Tarihleri Yönet | Doğum Günleri, Sınavlar ve Yıldönümleri",
-    "description": "Önemli tarihleri asla kaçırma! Sınırsız etkinlik kaydı, tekrarlayan hatırlatıcılar, kategori yönetimi. En sezgisel D-Day hesaplayıcı."
+    "description": "Önemli tarihleri asla kaçırma! Sınırsız etkinlik kaydı, tekrarlayan hatırlatıcılar, kategori yönetimi. En sezgisel D-Day hesaplayıcı.",
+    "loading": "Yükleniyor..."
   },
   "header": {
     "title": "D-Day Sayacı",

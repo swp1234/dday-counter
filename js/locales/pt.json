@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Contador de D-Day - Gerencie Datas Importantes | Contagem Regressiva para Aniversários, Provas e Comemorados",
-    "description": "Nunca perca datas importantes! Registro ilimitado de eventos, lembretes repetidos, gerenciamento de categorias. O contador D-Day mais intuitivo."
+    "description": "Nunca perca datas importantes! Registro ilimitado de eventos, lembretes repetidos, gerenciamento de categorias. O contador D-Day mais intuitivo.",
+    "loading": "Carregando..."
   },
   "header": {
     "title": "Contador de D-Day",

@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Penghitung D-Day - Kelola Tanggal Penting | Hitung Mundur ke Hari Jadi, Ujian & Ulang Tahun",
-    "description": "Jangan lewatkan tanggal penting! Pendaftaran acara tak terbatas, pengingat berulang, manajemen kategori. Kalkulator D-Day paling intuitif."
+    "description": "Jangan lewatkan tanggal penting! Pendaftaran acara tak terbatas, pengingat berulang, manajemen kategori. Kalkulator D-Day paling intuitif.",
+    "loading": "Memuat..."
   },
   "header": {
     "title": "Penghitung D-Day",

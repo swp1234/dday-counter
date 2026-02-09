@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "D-Day Zähler - Wichtige Daten verwalten | Countdown zu Jahrestagen, Examen & Geburtstagen",
-    "description": "Verpasse nie wichtige Daten! Unbegrenzte Ereignisregistrierung, wiederholte Erinnerungen, Kategorieverwaltung. Der intuitivste D-Day-Rechner."
+    "description": "Verpasse nie wichtige Daten! Unbegrenzte Ereignisregistrierung, wiederholte Erinnerungen, Kategorieverwaltung. Der intuitivste D-Day-Rechner.",
+    "loading": "Wird geladen..."
   },
   "header": {
     "title": "D-Day Zähler",
