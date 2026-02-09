@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "D-Day Counter - Manage Important Dates | Countdown to Anniversaries, Exams & Birthdays",
-    "description": "Never miss important dates! Unlimited event registration, repeat reminders, category management. The most intuitive D-Day calculator."
+    "description": "Never miss important dates! Unlimited event registration, repeat reminders, category management. The most intuitive D-Day calculator.",
+    "loading": "Loading..."
   },
   "header": {
     "title": "D-Day Counter",

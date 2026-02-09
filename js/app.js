@@ -4,11 +4,22 @@
 
 class DdayApp {
   constructor() {
+    this.hideLoader();
     this.events = this.loadFromStorage('events', []);
     this.sortMode = 'closest'; // 'closest', 'farthest', 'recent'
     this.editingId = null;
 
     this.init();
+  }
+
+  hideLoader() {
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('app-loader');
+      if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 300);
+      }
+    });
   }
 
   init() {

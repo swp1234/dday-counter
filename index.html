@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="max-image-preview:large">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
-  <meta name="description" data-i18n="app.description" content="생일, 기념일, 시험일을 놓치지 마세요! 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기.">
-  <meta name="keywords" content="D-Day 계산기, 디데이 카운터, 날짜 계산, 기념일 계산, 시험 디데이, 생일 카운트다운, 중요한 날짜, 반복 이벤트">
+  <meta name="description" data-i18n="app.description" content="생일, 기념일, 시험일을 놓치지 마세요! 📅 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기!">
+  <meta name="keywords" content="D-Day 계산기, 디데이 카운터, 날짜 계산, 기념일 계산, 시험 디데이, 생일 카운트다운, 중요한 날짜, 반복 이벤트, 기념일 알림">
   <meta name="theme-color" content="#3498db">
-  <title data-i18n="app.title">D-Day 카운터 - 중요한 날짜 관리 | 기념일·시험·생일 카운트다운</title>
+  <title data-i18n="app.title">D-Day 카운터 📅 - 중요한 날짜 관리 | 기념일·시험·생일</title>
   <link rel="canonical" href="https://dopabrain.com/dday-counter/">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
@@ -17,17 +17,23 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
     <!-- Open Graph -->
-    <meta property="og:title" content="D-Day 카운터 - 중요한 날짜를 놓치지 마세요">
-    <meta property="og:description" content="생일, 기념일, 시험일 카운트다운! 무한 이벤트 등록 & 반복 알림 📅">
+    <meta property="og:title" content="D-Day 카운터 📅 - 중요한 날짜를 놓치지 마세요!">
+    <meta property="og:description" content="생일, 기념일, 시험일 카운트다운! 📅 무한 이벤트 등록 & 반복 알림으로 중요한 날을 기억하세요!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dopabrain.com/dday-counter/">
     <meta property="og:image" content="https://dopabrain.com/dday-counter/icon-512.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/svg+xml">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D-Day 카운터 📅">
-    <meta name="twitter:description" content="중요한 날짜를 카운트다운하세요!">
+    <meta name="twitter:title" content="D-Day 카운터 📅 - 중요한 날짜 관리">
+    <meta name="twitter:description" content="생일, 기념일 카운트다운! 📅 무한 이벤트 등록!">
     <meta name="twitter:image" content="https://dopabrain.com/dday-counter/icon-512.svg">
+    <meta name="twitter:site" content="@dopabrain">
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
@@ -42,6 +48,14 @@
     </script>
 </head>
 <body>
+  <div class="app-loader" id="app-loader">
+    <div class="loader-content">
+      <div class="loader-emoji">⏰</div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text" data-i18n="app.loading">로딩 중...</div>
+    </div>
+  </div>
+
   <!-- 언어 선택기 -->
   <div class="language-selector">
     <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
