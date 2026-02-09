@@ -1,58 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradBlue2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2979af;stop-opacity:1" />
     </linearGradient>
-    <filter id="shadow">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
-      <feOffset dx="0" dy="4" result="offsetblur"/>
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.3"/>
-      </feComponentTransfer>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="512" height="512" rx="100" fill="#1a1a1a"/>
-
-  <!-- Calendar with shadow -->
-  <g filter="url(#shadow)">
-    <!-- Main calendar body -->
-    <rect x="120" y="150" width="272" height="240" rx="20" fill="url(#gradBlue2)"/>
-
-    <!-- Calendar header -->
-    <rect x="120" y="150" width="272" height="70" rx="20" fill="#2980b9"/>
-
-    <!-- Binding rings -->
-    <circle cx="175" cy="135" r="12" fill="#3498db"/>
-    <circle cx="256" cy="135" r="12" fill="#3498db"/>
-    <circle cx="337" cy="135" r="12" fill="#3498db"/>
-
-    <!-- Grid lines (vertical) -->
-    <line x1="200" y1="230" x2="200" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-    <line x1="280" y1="230" x2="280" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-
-    <!-- Grid lines (horizontal) -->
-    <line x1="130" y1="270" x2="382" y2="270" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-    <line x1="130" y1="320" x2="382" y2="320" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-
-    <!-- D-Day text -->
-    <text x="256" y="330" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">D-7</text>
+  <rect width="512" height="512" fill="url(#grad1)"/>
+  <g transform="translate(256, 256)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="200" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <text x="0" y="0" font-size="180" text-anchor="middle" dominant-baseline="central" fill="white" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" opacity="0.95">📅</text>
   </g>
-
-  <!-- Decorative elements -->
-  <circle cx="420" cy="190" r="8" fill="#5dade2" opacity="0.7"/>
-  <circle cx="440" cy="350" r="7" fill="#5dade2" opacity="0.6"/>
-  <circle cx="80" cy="240" r="6" fill="#5dade2" opacity="0.5"/>
-  <circle cx="90" cy="360" r="5" fill="#5dade2" opacity="0.6"/>
-
-  <!-- Clock icon (small) -->
-  <circle cx="430" cy="280" r="20" stroke="#5dade2" stroke-width="3" fill="none" opacity="0.5"/>
-  <line x1="430" y1="280" x2="430" y2="268" stroke="#5dade2" stroke-width="2" opacity="0.5"/>
-  <line x1="430" y1="280" x2="438" y2="288" stroke="#5dade2" stroke-width="2" opacity="0.5"/>
+  <g transform="translate(256, 256)">
+    <circle cx="0" cy="0" r="220" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  </g>
 </svg>
