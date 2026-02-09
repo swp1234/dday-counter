@@ -220,7 +220,9 @@ class DdayApp {
 
     const sortedEvents = this.sortEvents([...this.events]);
 
-    container.innerHTML = sortedEvents.map(event => {
+    container.innerHTML = '';
+
+    sortedEvents.forEach(event => {
       // 반복 이벤트인 경우 날짜 재계산
       const targetDate = event.repeat ? this.getRepeatDate(event.date) : event.date;
 
@@ -235,34 +237,73 @@ class DdayApp {
 
       const repeatBadge = event.repeat ? ' 🔁' : '';
 
-      return `
-        <div class="event-card ${event.category}">
-          <div class="event-dday">
-            <div class="dday-label">남은 날짜</div>
-            <div class="dday-value ${ddayClass}">${ddayText}</div>
-          </div>
-          <div class="event-info">
-            <div class="event-name">${event.name}${repeatBadge}</div>
-            <div class="event-details">
-              <span class="event-category">
-                ${categoryEmoji} ${categoryName}
-              </span>
-              <span class="event-date">
-                📅 ${this.formatDate(targetDate)}
-              </span>
-            </div>
-          </div>
-          <div class="event-actions">
-            <button class="action-btn edit" onclick="app.editEvent(${event.id})" title="수정">
-              ✏️
-            </button>
-            <button class="action-btn delete" onclick="app.deleteEvent(${event.id})" title="삭제">
-              🗑️
-            </button>
-          </div>
-        </div>
-      `;
-    }).join('');
+      // 카드 생성
+      const card = document.createElement('div');
+      card.className = `event-card ${event.category}`;
+
+      // D-Day 정보
+      const ddayDiv = document.createElement('div');
+      ddayDiv.className = 'event-dday';
+
+      const ddayLabel = document.createElement('div');
+      ddayLabel.className = 'dday-label';
+      ddayLabel.textContent = '남은 날짜';
+      ddayDiv.appendChild(ddayLabel);
+
+      const ddayValue = document.createElement('div');
+      ddayValue.className = `dday-value ${ddayClass}`;
+      ddayValue.textContent = ddayText;
+      ddayDiv.appendChild(ddayValue);
+      card.appendChild(ddayDiv);
+
+      // 이벤트 정보
+      const infoDiv = document.createElement('div');
+      infoDiv.className = 'event-info';
+
+      const nameDiv = document.createElement('div');
+      nameDiv.className = 'event-name';
+      nameDiv.textContent = event.name + repeatBadge;
+      infoDiv.appendChild(nameDiv);
+
+      const detailsDiv = document.createElement('div');
+      detailsDiv.className = 'event-details';
+
+      const categorySpan = document.createElement('span');
+      categorySpan.className = 'event-category';
+      categorySpan.textContent = `${categoryEmoji} ${categoryName}`;
+      detailsDiv.appendChild(categorySpan);
+
+      const dateSpan = document.createElement('span');
+      dateSpan.className = 'event-date';
+      dateSpan.textContent = `📅 ${this.formatDate(targetDate)}`;
+      detailsDiv.appendChild(dateSpan);
+
+      infoDiv.appendChild(detailsDiv);
+      card.appendChild(infoDiv);
+
+      // 액션 버튼
+      const actionsDiv = document.createElement('div');
+      actionsDiv.className = 'event-actions';
+
+      const editBtn = document.createElement('button');
+      editBtn.className = 'action-btn edit';
+      editBtn.title = '수정';
+      editBtn.textContent = '✏️';
+      editBtn.dataset.id = event.id;
+      editBtn.addEventListener('click', () => this.editEvent(event.id));
+      actionsDiv.appendChild(editBtn);
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'action-btn delete';
+      deleteBtn.title = '삭제';
+      deleteBtn.textContent = '🗑️';
+      deleteBtn.dataset.id = event.id;
+      deleteBtn.addEventListener('click', () => this.deleteEvent(event.id));
+      actionsDiv.appendChild(deleteBtn);
+
+      card.appendChild(actionsDiv);
+      container.appendChild(card);
+    });
   }
 
   // 카테고리 이모지
