@@ -272,16 +272,22 @@
   <script>
     // Initialize i18n
     (async () => {
-      await i18n.loadTranslations(i18n.currentLang);
-      i18n.updateUI();
+      try {
+        await i18n.loadTranslations(i18n.currentLang);
+        i18n.updateUI();
+      } catch (e) {
+        console.warn('i18n init failed:', e);
+      }
 
       // Language selector
       const langBtn = document.getElementById('langBtn');
       const langMenu = document.getElementById('langMenu');
 
-      langBtn.addEventListener('click', () => {
-        langMenu.classList.toggle('hidden');
-      });
+      if (langBtn) {
+        langBtn.addEventListener('click', () => {
+          langMenu.classList.toggle('hidden');
+        });
+      }
 
       document.querySelectorAll('[data-lang]').forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -295,6 +301,13 @@
           btn.classList.add('active');
         }
       });
+
+      // Hide loader regardless of i18n result
+      const loader = document.getElementById('app-loader');
+      if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 300);
+      }
     })();
   </script>
   <script src="js/app.js"></script>
