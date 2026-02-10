@@ -1,78 +1,346 @@
- 섹션 -->
-            <div class="rec-grid">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="max-image-preview:large">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
+  <meta name="description" data-i18n="app.description" content="생일, 기념일, 시험일을 놓치지 마세요! 📅 무한 이벤트 등록, 반복 알림 설정, 카테고리별 관리. 가장 직관적인 D-Day 계산기!">
+  <meta name="keywords" content="D-Day 계산기, 디데이 카운터, 날짜 계산, 기념일 계산, 시험 디데이, 생일 카운트다운, 중요한 날짜, 반복 이벤트, 기념일 알림">
+  <meta name="theme-color" content="#3498db">
+  <title data-i18n="app.title">D-Day 카운터 📅 - 중요한 날짜 관리 | 기념일·시험·생일</title>
+  <link rel="canonical" href="https://dopabrain.com/dday-counter/">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="D-Day 카운터 📅 - 중요한 날짜를 놓치지 마세요!">
+    <meta property="og:description" content="생일, 기념일, 시험일 카운트다운! 📅 무한 이벤트 등록 & 반복 알림으로 중요한 날을 기억하세요!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dopabrain.com/dday-counter/">
+    <meta property="og:image" content="https://dopabrain.com/dday-counter/icon-512.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <!-- hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/dday-counter/">
+    <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/dday-counter/">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="D-Day 카운터 📅 - 중요한 날짜 관리">
+    <meta name="twitter:description" content="생일, 기념일 카운트다운! 📅 무한 이벤트 등록!">
+    <meta name="twitter:image" content="https://dopabrain.com/dday-counter/icon-512.svg">
+    <meta name="twitter:site" content="@dopabrain">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "D-Day 카운터",
+      "description": "생일, 기념일, 시험일 등 중요한 날짜를 관리하는 카운트다운 앱. 무한 이벤트 등록, 반복 알림, 카테고리별 관리 기능 제공!",
+      "url": "https://dopabrain.com/dday-counter/",
+      "image": "https://dopabrain.com/dday-counter/icon-512.svg",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript. Modern browser (Chrome, Safari, Firefox, Edge).",
+      "inLanguage": ["ko", "en", "zh", "hi", "ru", "ja", "es", "pt", "id", "tr", "de", "fr"],
+      "author": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "ratingCount": "1680",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "featureList": "무한 이벤트 등록, D-Day 카운트다운, 반복 알림, 카테고리별 관리, LocalStorage 저장, 반응형 디자인, 다국어 지원"
+    }
+    </script>
+</head>
+<body>
+  <div class="app-loader" id="app-loader">
+    <div class="loader-content">
+      <div class="loader-emoji">⏰</div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text" data-i18n="app.loading">로딩 중...</div>
+    </div>
+  </div>
 
-                    <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
-                        <span class="rec-icon">💱</span>
-                        <span class="rec-info">
-                            <span class="rec-name">환율 계산기</span>
-                        </span>
-                    </a>
-                    <a href="https://dopabrain.com/detox-timer/" class="rec-card" target="_blank">
-                        <span class="rec-icon">⏱️</span>
-                        <span class="rec-info">
-                            <span class="rec-name">디지털 해독</span>
-                        </span>
-                    </a>
-                    <a href="https://dopabrain.com/lottery/" class="rec-card" target="_blank">
-                        <span class="rec-icon">🎲</span>
-                        <span class="rec-info">
-                            <span class="rec-name">로또 생성기</span>
-                        </span>
-                    </a>
-                    <a href="https://dopabrain.com/idle-clicker/" class="rec-card" target="_blank">
-                        <span class="rec-icon">⚔️</span>
-                        <span class="rec-info">
-                            <span class="rec-name">던전 클리커</span>
-                        </span>
-                    </a>
-                    <a href="https://dopabrain.com/zigzag-runner/" class="rec-card" target="_blank">
-                        <span class="rec-icon">🏃</span>
-                        <span class="rec-info">
-                            <span class="rec-name">지그재그 러너</span>
-                        </span>
-                    </a>
+  <!-- 언어 선택기 -->
+  <div class="language-selector">
+    <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
+    <div class="lang-menu hidden" id="langMenu">
+      <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+      <button class="lang-option" data-lang="en">🇺🇸 English</button>
+      <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+      <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+      <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
+      <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+      <button class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+      <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+      <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+      <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+      <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+      <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
+    </div>
+  </div>
 
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="app-title">
+        <span class="emoji" data-i18n="header.emoji">📅</span>
+        <span data-i18n="header.title">D-Day 카운터</span>
+      </h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
 
-                </div>
-            </div>
+  <!-- 광고 영역 (상단) -->
+  <div class="ad-banner ad-top">
+    <span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span>
+  </div>
 
+  <!-- 메인 컨텐츠 -->
+  <main class="main-container">
+    <!-- 이벤트 추가 버튼 -->
+    <section class="add-section">
+      <button class="add-btn" id="addEventBtn">
+        <span class="btn-icon">+</span>
+        <span data-i18n="addSection.button">새 이벤트 추가</span>
+      </button>
+    </section>
 
-                <!-- Cross-promotion recommendations section -->
+    <!-- 이벤트 추가 폼 (숨김) -->
+    <section class="form-section hidden" id="formSection">
+      <div class="form-card">
+        <h2 class="form-title" data-i18n="form.title">이벤트 추가</h2>
+        <form id="eventForm">
+          <div class="form-group">
+            <label for="eventName" data-i18n="form.eventName">이벤트 이름</label>
+            <input
+              type="text"
+              id="eventName"
+              class="input-field"
+              data-i18n-placeholder="form.eventNamePlaceholder"
+              placeholder="예: 생일, 시험, 여행"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="eventDate" data-i18n="form.eventDate">날짜</label>
+            <input
+              type="date"
+              id="eventDate"
+              class="input-field"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="eventCategory" data-i18n="form.eventCategory">카테고리</label>
+            <select id="eventCategory" class="select-field">
+              <option value="birthday" data-i18n="form.categories.birthday">🎂 생일</option>
+              <option value="anniversary" data-i18n="form.categories.anniversary">💝 기념일</option>
+              <option value="exam" data-i18n="form.categories.exam">📝 시험</option>
+              <option value="travel" data-i18n="form.categories.travel">✈️ 여행</option>
+              <option value="work" data-i18n="form.categories.work">💼 업무</option>
+              <option value="other" data-i18n="form.categories.other">📌 기타</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="eventRepeat" class="checkbox">
+              <span data-i18n="form.repeatLabel">매년 반복 (생일, 기념일 등)</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="cancelBtn" data-i18n="form.cancel">
+              취소
+            </button>
+            <button type="submit" class="btn-primary" data-i18n="form.save">
+              저장
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 정렬 옵션 -->
+    <section class="sort-section">
+      <div class="sort-buttons">
+        <button class="sort-btn active" data-sort="closest" data-i18n="sort.closest">
+          가까운 순
+        </button>
+        <button class="sort-btn" data-sort="farthest" data-i18n="sort.farthest">
+          먼 순
+        </button>
+        <button class="sort-btn" data-sort="recent" data-i18n="sort.recent">
+          최근 추가
+        </button>
+      </div>
+    </section>
+
+    <!-- 미니 캘린더 -->
+    <section class="calendar-section">
+      <h2 class="section-title" data-i18n="calendar.title">📅 이번 달 일정</h2>
+      <div id="miniCalendar" class="mini-calendar"></div>
+    </section>
+
+    <!-- 이벤트 리스트 -->
+    <section class="events-section">
+      <div class="events-container" id="eventsContainer">
+        <p class="empty-message" data-i18n="events.empty">아직 등록된 이벤트가 없습니다.<br>새 이벤트를 추가해보세요!</p>
+      </div>
+    </section>
+
+    <!-- 프리미엄 분석 버튼 -->
+    <section class="premium-section" id="premiumSection">
+      <button class="premium-btn" id="premiumBtn">
+        <span class="premium-icon">📊</span>
+        <span data-i18n="premium.button">AI D-Day 심층 분석</span>
+        <span class="premium-badge">PREMIUM</span>
+      </button>
+    </section>
+
+    <!-- 통계 -->
+    <section class="stats-section">
+      <h2 class="section-title" data-i18n="stats.title">통계</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-value" id="totalEvents">0</div>
+          <div class="stat-label" data-i18n="stats.totalEvents">전체 이벤트</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⏰</div>
+          <div class="stat-value" id="upcomingEvents">0</div>
+          <div class="stat-label" data-i18n="stats.upcomingEvents">다가오는 이벤트</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value" id="passedEvents">0</div>
+          <div class="stat-label" data-i18n="stats.passedEvents">지난 이벤트</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 크로스 프로모션 섹션 -->
+    
+              <!-- 크로스 프로모션 추천 섹션 -->
             <div class="recommendations-section">
                 <div class="rec-title" data-i18n="recommendations.title">이것도 해보세요</div>
                 <div class="rec-grid">
+                    <a href="https://dopabrain.com/unit-converter/" class="rec-card" target="_blank">
+                        <span class="rec-icon">📏</span>
+                        <span class="rec-info">
+                            <span class="rec-name">단위 변환기</span>
+                        </span>
+                    </a>
                     <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
                         <span class="rec-icon">💱</span>
                         <span class="rec-info">
-                            <span class="rec-name">환율 계산기</span>
+                            <span class="rec-name">환전 계산기</span>
                         </span>
                     </a>
-                    <a href="https://dopabrain.com/detox-timer/" class="rec-card" target="_blank">
-                        <span class="rec-icon">⏱️</span>
+                    <a href="https://dopabrain.com/tax-refund-preview/" class="rec-card" target="_blank">
+                        <span class="rec-icon">📊</span>
                         <span class="rec-info">
-                            <span class="rec-name">디지털 해독</span>
+                            <span class="rec-name">연말정산</span>
                         </span>
                     </a>
                     <a href="https://dopabrain.com/lottery/" class="rec-card" target="_blank">
-                        <span class="rec-icon">🎲</span>
+                        <span class="rec-icon">🎰</span>
                         <span class="rec-info">
-                            <span class="rec-name">로또 생성기</span>
+                            <span class="rec-name">로또 번호 추천</span>
                         </span>
                     </a>
-                    <a href="https://dopabrain.com/idle-clicker/" class="rec-card" target="_blank">
-                        <span class="rec-icon">⚔️</span>
+                    <a href="https://dopabrain.com/valentine/" class="rec-card" target="_blank">
+                        <span class="rec-icon">💘</span>
                         <span class="rec-info">
-                            <span class="rec-name">던전 클리커</span>
+                            <span class="rec-name">발렌타인</span>
                         </span>
                     </a>
-                    <a href="https://dopabrain.com/zigzag-runner/" class="rec-card" target="_blank">
-                        <span class="rec-icon">🏃</span>
+                    <a href="https://dopabrain.com/mbti-tips/" class="rec-card" target="_blank">
+                        <span class="rec-icon">📖</span>
                         <span class="rec-info">
-                            <span class="rec-name">지그재그 러너</span>
+                            <span class="rec-name">MBTI 팁</span>
                         </span>
                     </a>
                 </div>
             </div>
+        </div>
 
-    </body>
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script>
+    // Initialize i18n
+    (async () => {
+      await i18n.loadTranslations(i18n.currentLang);
+      i18n.updateUI();
+
+      // Language selector
+      const langBtn = document.getElementById('langBtn');
+      const langMenu = document.getElementById('langMenu');
+
+      langBtn.addEventListener('click', () => {
+        langMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('[data-lang]').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const lang = e.target.getAttribute('data-lang');
+          await i18n.setLanguage(lang);
+          document.querySelectorAll('[data-lang]').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          langMenu.classList.add('hidden');
+        });
+        if (btn.getAttribute('data-lang') === i18n.currentLang) {
+          btn.classList.add('active');
+        }
+      });
+    })();
+  </script>
+  <script src="js/app.js"></script>
+</body>
 </html>
