@@ -52,10 +52,11 @@ class DdayApp {
       }
     });
 
-    const monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
-    const dayNames = ['일','월','화','수','목','금','토'];
+    const lang = window.i18n?.getCurrentLanguage?.() || navigator.language || 'en';
+    const monthName = new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long' }).format(new Date(year, month));
+    const dayNames = Array.from({length: 7}, (_, i) => new Intl.DateTimeFormat(lang, { weekday: 'short' }).format(new Date(2024, 0, i)));
 
-    let html = `<div class="cal-header">${year}년 ${monthNames[month]}</div>`;
+    let html = `<div class="cal-header">${monthName}</div>`;
     html += '<div class="cal-grid">';
     dayNames.forEach(d => { html += `<div class="cal-day-name">${d}</div>`; });
 
@@ -160,7 +161,7 @@ class DdayApp {
 
   // 이벤트 삭제
   deleteEvent(id) {
-    if (confirm('이 이벤트를 삭제하시겠습니까?')) {
+    if (confirm(window.i18n?.t('messages.confirm') || 'Delete this event?')) {
       this.events = this.events.filter(e => e.id !== id);
       this.saveToStorage('events', this.events);
       this.renderEvents();
