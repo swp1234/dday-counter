@@ -531,22 +531,30 @@ class DdayApp {
   // 테마 설정
   setupTheme() {
     const savedTheme = localStorage.getItem('dday_theme') || 'dark';
-    if (savedTheme === 'light') {
-      document.body.classList.add('light-theme');
-      document.getElementById('themeToggle').querySelector('.theme-icon').textContent = '☀️';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const themeIcon = themeToggle.querySelector('.theme-icon');
+      if (themeIcon) {
+        themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+      }
     }
   }
 
   // 테마 토글
   toggleTheme() {
-    const body = document.body;
-    const themeIcon = document.getElementById('themeToggle').querySelector('.theme-icon');
-
-    body.classList.toggle('light-theme');
-    const isLight = body.classList.contains('light-theme');
-
-    themeIcon.textContent = isLight ? '☀️' : '🌙';
-    localStorage.setItem('dday_theme', isLight ? 'light' : 'dark');
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('dday_theme', next);
+    
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const themeIcon = themeToggle.querySelector('.theme-icon');
+      if (themeIcon) {
+        themeIcon.textContent = next === 'light' ? '🌙' : '☀️';
+      }
+    }
   }
 
   // 이벤트 리스너 설정
