@@ -93,6 +93,11 @@
     </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">Skip to main content</a>
+  <style>
+      .skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:8px 16px;text-decoration:none;z-index:10000;border-radius:0 0 4px 0;font-size:14px;transition:top 0.2s}
+      .skip-link:focus{top:0}
+  </style>
   <div class="app-loader" id="app-loader">
     <div class="loader-content">
       <div class="loader-emoji">⏰</div>
@@ -139,7 +144,7 @@
   </div>
 
   <!-- 메인 컨텐츠 -->
-  <main class="main-container">
+  <main class="main-container" id="main-content">
     <!-- 이벤트 추가 버튼 -->
     <section class="add-section">
       <button class="add-btn" id="addEventBtn">
