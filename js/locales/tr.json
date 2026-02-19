@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day Sayacı",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Dil seç"
   },
   "addSection": {
     "button": "Yeni Etkinlik Ekle"
@@ -98,5 +99,16 @@
     "banner": "Reklam",
     "interstitial": "Reklam",
     "close": "Kapat"
+  },
+  "game": {
+    "back": "Geri"
+  },
+  "accessibility": {
+    "skipMain": "Ana içeriğe geç"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 URL Kopyala",
+    "copied": "✅ Kopyalandı!"
   }
 }

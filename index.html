@@ -108,7 +108,7 @@
 
   <!-- 언어 선택기 -->
   <div class="language-selector">
-    <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
+    <button class="lang-btn" id="langBtn" title="언어 선택" data-i18n-title="header.langSelect">🌐</button>
     <div class="lang-menu hidden" id="langMenu">
       <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
       <button class="lang-option" data-lang="en">🇺🇸 English</button>
@@ -273,10 +273,10 @@
     <!-- Social Share Buttons -->
     <div class="share-section" id="share-section">
         <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter">
-            <span>𝕏</span> Twitter
+            <span>𝕏</span> <span data-i18n="share.twitter">Twitter</span>
         </button>
         <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL">
-            📋 Copy URL
+            <span data-i18n="share.copyUrl">📋 Copy URL</span>
         </button>
     </div>
 
@@ -349,7 +349,7 @@
   </style>
   <script>
       document.getElementById('shareTwitterBtn')?.addEventListener('click',function(){var t=document.title+' '+window.location.href;window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t),'_blank');if(typeof gtag!=='undefined')gtag('event','share',{method:'twitter'})});
-      document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent='✅ Copied!';setTimeout(function(){b.innerHTML='📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
+      document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent=(window.i18n?.t('share.copied')||'✅ Copied!');setTimeout(function(){b.innerHTML=(window.i18n?.t('share.copyUrl')||'📋 Copy URL')},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
   </script>
   <script>
     if ('serviceWorker' in navigator) {

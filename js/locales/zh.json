@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day 计数器",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "选择语言"
   },
   "addSection": {
     "button": "添加新事件"
@@ -98,5 +99,16 @@
     "banner": "广告区域",
     "interstitial": "广告",
     "close": "关闭"
+  },
+  "game": {
+    "back": "返回"
+  },
+  "accessibility": {
+    "skipMain": "跳到主内容"
+  },
+  "share": {
+    "twitter": "推特",
+    "copyUrl": "📋 复制链接",
+    "copied": "✅ 已复制!"
   }
 }

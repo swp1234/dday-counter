@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day काउंटर",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "भाषा चुनें"
   },
   "addSection": {
     "button": "नया ईवेंट जोड़ें"
@@ -98,5 +99,16 @@
     "banner": "विज्ञापन",
     "interstitial": "विज्ञापन",
     "close": "बंद करें"
+  },
+  "game": {
+    "back": "वापस"
+  },
+  "accessibility": {
+    "skipMain": "मुख्य सामग्री पर जाएं"
+  },
+  "share": {
+    "twitter": "ट्विटर",
+    "copyUrl": "📋 URL कॉपी करें",
+    "copied": "✅ कॉपी किया!"
   }
 }

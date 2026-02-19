@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "Compteur D-Day",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Choisir la langue"
   },
   "addSection": {
     "button": "Ajouter un Nouvel Événement"
@@ -98,5 +99,16 @@
     "banner": "Publicité",
     "interstitial": "Annonce",
     "close": "Fermer"
+  },
+  "game": {
+    "back": "Retour"
+  },
+  "accessibility": {
+    "skipMain": "Aller au contenu principal"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 Copier URL",
+    "copied": "✅ Copié!"
   }
 }

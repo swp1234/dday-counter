@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day Zähler",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Sprache auswählen"
   },
   "addSection": {
     "button": "Neues Ereignis hinzufügen"
@@ -98,5 +99,16 @@
     "banner": "Werbung",
     "interstitial": "Anzeige",
     "close": "Schließen"
+  },
+  "game": {
+    "back": "Zurück"
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 URL kopieren",
+    "copied": "✅ Kopiert!"
   }
 }

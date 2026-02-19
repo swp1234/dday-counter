@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "Penghitung D-Day",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Pilih bahasa"
   },
   "addSection": {
     "button": "Tambah Acara Baru"
@@ -98,5 +99,16 @@
     "banner": "Iklan",
     "interstitial": "Iklan",
     "close": "Tutup"
+  },
+  "game": {
+    "back": "Kembali"
+  },
+  "accessibility": {
+    "skipMain": "Lewati ke konten utama"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 Salin URL",
+    "copied": "✅ Disalin!"
   }
 }

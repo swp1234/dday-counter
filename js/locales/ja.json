@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Dayカウンター",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "言語選択"
   },
   "addSection": {
     "button": "新しいイベントを追加"
@@ -98,5 +99,16 @@
     "banner": "広告",
     "interstitial": "広告",
     "close": "閉じる"
+  },
+  "game": {
+    "back": "戻る"
+  },
+  "accessibility": {
+    "skipMain": "メインコンテンツへ"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 URLコピー",
+    "copied": "✅ コピー済み!"
   }
 }

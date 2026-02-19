@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day Счетчик",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Выбрать язык"
   },
   "addSection": {
     "button": "Добавить новое событие"
@@ -98,5 +99,16 @@
     "banner": "Реклама",
     "interstitial": "Объявление",
     "close": "Закрыть"
+  },
+  "game": {
+    "back": "Назад"
+  },
+  "accessibility": {
+    "skipMain": "Перейти к основному содержанию"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 Копировать URL",
+    "copied": "✅ Скопировано!"
   }
 }

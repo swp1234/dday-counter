@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day Counter",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "Select language"
   },
   "addSection": {
     "button": "Add New Event"
@@ -98,5 +99,16 @@
     "banner": "Advertisement",
     "interstitial": "Ad",
     "close": "Close"
+  },
+  "game": {
+    "back": "Back"
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "share": {
+    "twitter": "Twitter",
+    "copyUrl": "📋 Copy URL",
+    "copied": "✅ Copied!"
   }
 }

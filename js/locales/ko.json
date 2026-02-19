@@ -6,7 +6,8 @@
   },
   "header": {
     "title": "D-Day 카운터",
-    "emoji": "📅"
+    "emoji": "📅",
+    "langSelect": "언어 선택"
   },
   "addSection": {
     "button": "새 이벤트 추가"
@@ -98,5 +99,16 @@
     "banner": "광고 영역",
     "interstitial": "광고",
     "close": "닫기"
+  },
+  "game": {
+    "back": "뒤로"
+  },
+  "accessibility": {
+    "skipMain": "본문으로 이동"
+  },
+  "share": {
+    "twitter": "트위터",
+    "copyUrl": "📋 URL 복사",
+    "copied": "✅ 복사됨!"
   }
 }
