@@ -110,5 +110,12 @@
     "twitter": "Twitter",
     "copyUrl": "📋 Копировать URL",
     "copied": "✅ Скопировано!"
+  },
+  "related": {
+    "title": "Ещё интересное",
+    "pomodoroTimer": "Помодоро таймер",
+    "routinePlanner": "Планировщик",
+    "todoList": "Список дел",
+    "lifeInNumbers": "Жизнь в числах"
   }
 }

@@ -110,5 +110,12 @@
     "twitter": "트위터",
     "copyUrl": "📋 URL 복사",
     "copied": "✅ 복사됨!"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "pomodoroTimer": "포모도로 타이머",
+    "routinePlanner": "루틴 플래너",
+    "todoList": "할 일 목록",
+    "lifeInNumbers": "숫자로 보는 인생"
   }
 }

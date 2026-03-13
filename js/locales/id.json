@@ -110,5 +110,12 @@
     "twitter": "Twitter",
     "copyUrl": "📋 Salin URL",
     "copied": "✅ Disalin!"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "pomodoroTimer": "Timer Pomodoro",
+    "routinePlanner": "Perencana Rutinitas",
+    "todoList": "Daftar Tugas",
+    "lifeInNumbers": "Hidup dalam Angka"
   }
 }

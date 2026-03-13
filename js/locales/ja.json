@@ -110,5 +110,12 @@
     "twitter": "Twitter",
     "copyUrl": "📋 URLコピー",
     "copied": "✅ コピー済み!"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "pomodoroTimer": "ポモドーロタイマー",
+    "routinePlanner": "ルーティンプランナー",
+    "todoList": "Todoリスト",
+    "lifeInNumbers": "数字で見る人生"
   }
 }

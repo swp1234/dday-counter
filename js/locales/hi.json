@@ -110,5 +110,12 @@
     "twitter": "ट्विटर",
     "copyUrl": "📋 URL कॉपी करें",
     "copied": "✅ कॉपी किया!"
+  },
+  "related": {
+    "title": "और खोजें",
+    "pomodoroTimer": "पोमोडोरो टाइमर",
+    "routinePlanner": "रूटीन प्लानर",
+    "todoList": "कार्य सूची",
+    "lifeInNumbers": "संख्याओं में जीवन"
   }
 }

@@ -110,5 +110,12 @@
     "twitter": "推特",
     "copyUrl": "📋 复制链接",
     "copied": "✅ 已复制!"
+  },
+  "related": {
+    "title": "探索更多",
+    "pomodoroTimer": "番茄钟",
+    "routinePlanner": "日程规划",
+    "todoList": "待办清单",
+    "lifeInNumbers": "数字人生"
   }
 }

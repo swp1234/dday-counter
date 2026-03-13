@@ -110,5 +110,12 @@
     "twitter": "Twitter",
     "copyUrl": "📋 Copy URL",
     "copied": "✅ Copied!"
+  },
+  "related": {
+    "title": "More to Explore",
+    "pomodoroTimer": "Pomodoro Timer",
+    "routinePlanner": "Routine Planner",
+    "todoList": "Todo List",
+    "lifeInNumbers": "Life in Numbers"
   }
 }

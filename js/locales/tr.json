@@ -110,5 +110,12 @@
     "twitter": "Twitter",
     "copyUrl": "📋 URL Kopyala",
     "copied": "✅ Kopyalandı!"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "pomodoroTimer": "Pomodoro Zamanlayıcı",
+    "routinePlanner": "Rutin Planlayıcı",
+    "todoList": "Yapılacaklar",
+    "lifeInNumbers": "Sayılarla Hayat"
   }
 }
