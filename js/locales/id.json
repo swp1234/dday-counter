@@ -117,5 +117,24 @@
     "routinePlanner": "Perencana Rutinitas",
     "todoList": "Daftar Tugas",
     "lifeInNumbers": "Hidup dalam Angka"
+  },
+  "about": {
+    "title": "Tentang Penghitung D-Day",
+    "desc": "Penghitung D-Day DopaBrain melacak hitung mundur ulang tahun, peringatan, ujian, perjalanan, dan lainnya. Sepenuhnya gratis.",
+    "howTitle": "Cara Menggunakan Penghitung D-Day",
+    "howDesc": "Klik 'Tambah Acara Baru', masukkan nama, tanggal, dan kategori, lalu simpan."
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Berapa banyak acara yang bisa saya daftarkan?",
+    "a1": "Tidak terbatas. Anda dapat mendaftarkan acara sebanyak yang Anda inginkan.",
+    "q2": "Di mana data saya disimpan?",
+    "a2": "Semua data disimpan di LocalStorage browser. Tidak ada yang dikirim ke server.",
+    "q3": "Bagaimana cara mengatur acara berulang?",
+    "a3": "Saat menambahkan acara, aktifkan kotak centang 'Ulangi setiap tahun'.",
+    "q4": "Bisakah saya mengatur acara berdasarkan kategori?",
+    "a4": "Ya, Anda dapat mengategorikan ke 6 jenis: ulang tahun, peringatan, ujian, perjalanan, kerja, dan lainnya.",
+    "q5": "Apakah aplikasi ini gratis?",
+    "a5": "Ya, sepenuhnya gratis. Semua fitur tersedia tanpa biaya."
   }
 }

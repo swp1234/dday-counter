@@ -117,5 +117,24 @@
     "routinePlanner": "Routine Planner",
     "todoList": "Todo List",
     "lifeInNumbers": "Life in Numbers"
+  },
+  "about": {
+    "title": "About D-Day Counter",
+    "desc": "DopaBrain D-Day Counter tracks countdowns to birthdays, anniversaries, exams, travel, and more. Features unlimited event registration, yearly repeat reminders, category management, and mini calendar. Completely free.",
+    "howTitle": "How to Use D-Day Counter",
+    "howDesc": "Click 'Add New Event', enter the event name, date, and category, then save. Enable the repeat option for annual events. Sort your events by closest, farthest, or most recently added."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How many events can I register?",
+    "a1": "Unlimited. You can register as many events as you want without any restrictions.",
+    "q2": "Where is my data stored?",
+    "a2": "All data is stored in your browser's LocalStorage. Nothing is sent to a server. Your data persists when you revisit using the same browser.",
+    "q3": "How do I set up recurring events?",
+    "a3": "When adding an event, enable the 'Repeat yearly' checkbox. This is perfect for birthdays and anniversaries that recur annually.",
+    "q4": "Can I organize events by category?",
+    "a4": "Yes, you can categorize events into 6 types: birthday, anniversary, exam, travel, work, and other.",
+    "q5": "Is this app free?",
+    "a5": "Yes, it is completely free. All features including unlimited events, category management, and mini calendar are available at no cost."
   }
 }

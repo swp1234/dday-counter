@@ -117,5 +117,24 @@
     "routinePlanner": "Rutin Planlayıcı",
     "todoList": "Yapılacaklar",
     "lifeInNumbers": "Sayılarla Hayat"
+  },
+  "about": {
+    "title": "D-Day Sayacı Hakkında",
+    "desc": "DopaBrain D-Day Sayacı doğum günleri, yıldönümleri, sınavlar ve seyahatler için geri sayım yapar. Tamamen ücretsiz.",
+    "howTitle": "D-Day Sayacı Nasıl Kullanılır",
+    "howDesc": "'Yeni Etkinlik Ekle'ye tıklayın, ad, tarih ve kategori girin, kaydedin."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Kaç etkinlik kaydedebilirim?",
+    "a1": "Sınırsız. İstediğiniz kadar etkinlik kaydedebilirsiniz.",
+    "q2": "Verilerim nerede saklanır?",
+    "a2": "Tüm veriler tarayıcınızın LocalStorage'ında saklanır. Sunucuya gönderilmez.",
+    "q3": "Tekrarlayan etkinlikler nasıl ayarlanır?",
+    "a3": "Etkinlik eklerken 'Her yıl tekrarla' onay kutusunu etkinleştirin.",
+    "q4": "Etkinlikleri kategoriye göre düzenleyebilir miyim?",
+    "a4": "Evet, doğum günü, yıldönümü, sınav, seyahat, iş ve diğer olmak üzere 6 kategoriye ayırabilirsiniz.",
+    "q5": "Bu uygulama ücretsiz mi?",
+    "a5": "Evet, tamamen ücretsizdir. Tüm özellikler ücretsiz olarak kullanılabilir."
   }
 }

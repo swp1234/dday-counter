@@ -52,6 +52,32 @@
     <meta name="twitter:description" content="Countdown to birthdays, anniversaries, exams! Unlimited events. Free D-Day tracker!">
     <meta name="twitter:image" content="https://dopabrain.com/dday-counter/icon-512.svg">
     <meta name="twitter:site" content="@dopabrain">
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://dopabrain.com/portal/" },
+        { "@type": "ListItem", "position": 3, "name": "D-Day Counter", "item": "https://dopabrain.com/dday-counter/" }
+      ]
+    }
+    </script>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How many events can I register?", "acceptedAnswer": { "@type": "Answer", "text": "Unlimited. You can register as many events as you want without any restrictions." }},
+        { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "All data is stored in your browser's LocalStorage. Nothing is sent to a server. Your data persists when you revisit using the same browser." }},
+        { "@type": "Question", "name": "How do I set up recurring events?", "acceptedAnswer": { "@type": "Answer", "text": "When adding an event, enable the 'Repeat yearly' checkbox. This is perfect for birthdays and anniversaries that recur annually." }},
+        { "@type": "Question", "name": "Can I organize events by category?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can categorize events into 6 types: birthday, anniversary, exam, travel, work, and other." }},
+        { "@type": "Question", "name": "Is this app free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is completely free. All features including unlimited events, category management, and mini calendar are available at no cost." }}
+      ]
+    }
+    </script>
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
@@ -358,6 +384,24 @@
       });
     }
   </script>
+  <!-- About Section -->
+  <section style="max-width:640px;margin:32px auto;padding:0 16px;">
+    <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About D-Day Counter</h2>
+    <p data-i18n="about.desc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">DopaBrain D-Day Counter tracks countdowns to birthdays, anniversaries, exams, travel, and more. Features unlimited event registration, yearly repeat reminders, category management, and mini calendar. Completely free.</p>
+    <h2 data-i18n="about.howTitle" style="font-size:18px;margin-bottom:10px;">How to Use D-Day Counter</h2>
+    <p data-i18n="about.howDesc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">Click 'Add New Event', enter the event name, date, and category, then save. Enable the repeat option for annual events. Sort your events by closest, farthest, or most recently added.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="max-width:640px;margin:24px auto;padding:0 16px;">
+    <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
+    <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;">How many events can I register?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Unlimited. You can register as many events as you want without any restrictions.</p></details>
+    <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;">Where is my data stored?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">All data is stored in your browser's LocalStorage. Nothing is sent to a server.</p></details>
+    <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;">How do I set up recurring events?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">When adding an event, enable the 'Repeat yearly' checkbox. Perfect for birthdays and anniversaries.</p></details>
+    <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;">Can I organize events by category?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, you can categorize events into 6 types: birthday, anniversary, exam, travel, work, and other.</p></details>
+    <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;">Is this app free?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, completely free. All features including unlimited events, category management, and mini calendar are available at no cost.</p></details>
+  </section>
+
   <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
     <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">

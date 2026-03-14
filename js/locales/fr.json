@@ -117,5 +117,24 @@
     "routinePlanner": "Planificateur de routine",
     "todoList": "Liste de tâches",
     "lifeInNumbers": "La vie en chiffres"
+  },
+  "about": {
+    "title": "À propos du Compteur D-Day",
+    "desc": "Le Compteur D-Day DopaBrain suit les comptes à rebours pour anniversaires, commémorations, examens et voyages. Entièrement gratuit.",
+    "howTitle": "Comment utiliser le Compteur D-Day",
+    "howDesc": "Cliquez sur 'Ajouter un événement', entrez le nom, la date et la catégorie, puis enregistrez."
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Combien d'événements puis-je enregistrer ?",
+    "a1": "Illimité. Enregistrez autant d'événements que vous le souhaitez.",
+    "q2": "Où mes données sont-elles stockées ?",
+    "a2": "Toutes les données sont stockées dans le LocalStorage de votre navigateur. Rien n'est envoyé à un serveur.",
+    "q3": "Comment configurer des événements récurrents ?",
+    "a3": "Lors de l'ajout, cochez la case 'Répéter chaque année'.",
+    "q4": "Puis-je organiser les événements par catégorie ?",
+    "a4": "Oui, vous pouvez catégoriser en 6 types : anniversaire, commémoration, examen, voyage, travail et autre.",
+    "q5": "Cette application est-elle gratuite ?",
+    "a5": "Oui, entièrement gratuit. Toutes les fonctionnalités sont disponibles sans frais."
   }
 }

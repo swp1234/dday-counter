@@ -117,5 +117,24 @@
     "routinePlanner": "Planificador de rutinas",
     "todoList": "Lista de tareas",
     "lifeInNumbers": "Vida en números"
+  },
+  "about": {
+    "title": "Acerca del Contador D-Day",
+    "desc": "El Contador D-Day de DopaBrain rastrea cuentas regresivas para cumpleaños, aniversarios, exámenes y viajes. Completamente gratis.",
+    "howTitle": "Cómo usar el Contador D-Day",
+    "howDesc": "Haz clic en 'Agregar Evento', ingresa nombre, fecha y categoría, luego guarda."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuántos eventos puedo registrar?",
+    "a1": "Ilimitados. Puedes registrar tantos eventos como quieras.",
+    "q2": "¿Dónde se almacenan mis datos?",
+    "a2": "Todos los datos se almacenan en el LocalStorage de tu navegador. Nada se envía al servidor.",
+    "q3": "¿Cómo configuro eventos recurrentes?",
+    "a3": "Al agregar un evento, activa la casilla 'Repetir anualmente'.",
+    "q4": "¿Puedo organizar eventos por categoría?",
+    "a4": "Sí, puedes categorizar en 6 tipos: cumpleaños, aniversario, examen, viaje, trabajo y otros.",
+    "q5": "¿Esta app es gratis?",
+    "a5": "Sí, completamente gratis. Todas las funciones disponibles sin costo."
   }
 }

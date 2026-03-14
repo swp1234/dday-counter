@@ -117,5 +117,24 @@
     "routinePlanner": "Routinenplaner",
     "todoList": "Aufgabenliste",
     "lifeInNumbers": "Leben in Zahlen"
+  },
+  "about": {
+    "title": "Über den D-Day-Zähler",
+    "desc": "Der DopaBrain D-Day-Zähler verfolgt Countdowns zu Geburtstagen, Jubiläen, Prüfungen und Reisen. Völlig kostenlos.",
+    "howTitle": "So verwenden Sie den D-Day-Zähler",
+    "howDesc": "Klicken Sie auf 'Neues Ereignis hinzufügen', geben Sie Name, Datum und Kategorie ein und speichern Sie."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie viele Ereignisse kann ich registrieren?",
+    "a1": "Unbegrenzt. Registrieren Sie so viele Ereignisse wie Sie möchten.",
+    "q2": "Wo werden meine Daten gespeichert?",
+    "a2": "Alle Daten werden im LocalStorage Ihres Browsers gespeichert. Nichts wird an einen Server gesendet.",
+    "q3": "Wie richte ich wiederkehrende Ereignisse ein?",
+    "a3": "Aktivieren Sie beim Hinzufügen das Kontrollkästchen 'Jährlich wiederholen'.",
+    "q4": "Kann ich Ereignisse nach Kategorie organisieren?",
+    "a4": "Ja, Sie können Ereignisse in 6 Typen einteilen: Geburtstag, Jubiläum, Prüfung, Reise, Arbeit und Sonstiges.",
+    "q5": "Ist diese App kostenlos?",
+    "a5": "Ja, völlig kostenlos. Alle Funktionen stehen kostenlos zur Verfügung."
   }
 }
