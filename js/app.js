@@ -601,8 +601,8 @@ class DdayApp {
     });
 
     // 프리미엄 모달 닫기
-    document.getElementById('closePremiumBtn').addEventListener('click', () => {
-      document.getElementById('premiumModal').classList.add('hidden');
+    document.getElementById('closePremiumBtn')?.addEventListener('click', () => {
+      document.getElementById('premiumModal')?.classList.add('hidden');
     });
   }
 }

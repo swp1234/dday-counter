@@ -3,8 +3,14 @@ class I18n {
         this.translations = {};
         this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
     }
     detectLanguage() {
+        try {
+            const params = new URLSearchParams(window.location.search || '');
+            const urlLang = params.get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
+        } catch (e) {}
         const savedLang = localStorage.getItem('app_language');
         if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
         const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
