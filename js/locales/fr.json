@@ -116,7 +116,9 @@
     "pomodoroTimer": "Minuteur Pomodoro",
     "routinePlanner": "Planificateur de routine",
     "todoList": "Liste de tâches",
-    "lifeInNumbers": "La vie en chiffres"
+    "lifeInNumbers": "La vie en chiffres",
+    "detoxTimer": "Minuteur Détox",
+    "futureSelf": "Moi du Futur"
   },
   "about": {
     "title": "À propos du Compteur D-Day",

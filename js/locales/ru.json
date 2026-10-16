@@ -116,7 +116,9 @@
     "pomodoroTimer": "Помодоро таймер",
     "routinePlanner": "Планировщик",
     "todoList": "Список дел",
-    "lifeInNumbers": "Жизнь в числах"
+    "lifeInNumbers": "Жизнь в числах",
+    "detoxTimer": "Детокс-таймер",
+    "futureSelf": "Будущее Я"
   },
   "about": {
     "title": "О счётчике D-Day",
