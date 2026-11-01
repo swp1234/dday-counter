@@ -46,6 +46,7 @@ class I18n {
         document.title = this.t('app.title');
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.content = this.t('app.description');
+        if (typeof preserveLanguageLinks === 'function') preserveLanguageLinks();
     }
     getCurrentLanguage() { return this.currentLang; }
     getLanguageName(lang) {

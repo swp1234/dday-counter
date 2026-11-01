@@ -609,6 +609,37 @@ class DdayApp {
 
 // 앱 초기화
 const app = new DdayApp();
+preserveLanguageLinks();
+
+function preserveLanguageLinks() {
+  try {
+    const lang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+    document.querySelectorAll('.related-card, a[href^="/pomodoro-timer/"], a[href^="/detox-timer/"], a[href^="/future-self/"], a[href^="/life-in-numbers/"]').forEach(function(a) {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('/portal/')) return;
+      const url = new URL(href, window.location.origin);
+      if (lang) {
+        url.searchParams.set('lang', lang);
+      }
+      url.searchParams.set('source', 'dday_counter_result');
+      a.setAttribute('href', url.pathname + url.search + url.hash);
+
+      if (!a.__ctaBound) {
+        a.__ctaBound = true;
+        a.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'content_cta_click', {
+              cta_surface: 'related_tools',
+              destination: a.getAttribute('href'),
+              source: 'dday_counter_result',
+              lang: lang || 'en'
+            });
+          }
+        });
+      }
+    });
+  } catch (e) {}
+}
 
 // Service Worker 등록
 if ('serviceWorker' in navigator) {
