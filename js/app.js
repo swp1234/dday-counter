@@ -410,35 +410,9 @@ class DdayApp {
     formSection.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // 전면 광고 표시
+  // 전면 광고 제거 및 다이렉트 완료 (구글 정책 준수)
   showInterstitialAd() {
-    return new Promise((resolve) => {
-      const overlay = document.getElementById('interstitialAd');
-      const closeBtn = document.getElementById('closeAdBtn');
-      const countdown = document.getElementById('adCountdown');
-
-      overlay.classList.remove('hidden');
-      closeBtn.disabled = true;
-      let seconds = 5;
-      countdown.textContent = seconds;
-
-      const timer = setInterval(() => {
-        seconds--;
-        countdown.textContent = seconds;
-        if (seconds <= 0) {
-          clearInterval(timer);
-          closeBtn.disabled = false;
-          closeBtn.textContent = '닫기';
-        }
-      }, 1000);
-
-      closeBtn.addEventListener('click', () => {
-        overlay.classList.add('hidden');
-        closeBtn.disabled = true;
-        countdown.textContent = '5';
-        resolve();
-      }, { once: true });
-    });
+    return Promise.resolve();
   }
 
   // 프리미엄 콘텐츠
@@ -447,8 +421,6 @@ class DdayApp {
       alert('먼저 이벤트를 추가해주세요.');
       return;
     }
-
-    await this.showInterstitialAd();
 
     const premiumBody = document.getElementById('premiumBody');
 
