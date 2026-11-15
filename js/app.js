@@ -26,8 +26,49 @@ class DdayApp {
     this.renderEvents();
     this.renderStats();
     this.renderMiniCalendar();
+    this.renderCuratedResources();
     this.setupEventListeners();
     this.setupTheme();
+  }
+
+  tr(key, fallback) {
+    if (window.i18n && typeof window.i18n.t === 'function') {
+      const val = window.i18n.t(key);
+      if (val && val !== key) return val;
+    }
+    return fallback;
+  }
+
+  onLanguageChange() {
+    this.renderEvents();
+    this.renderMiniCalendar();
+    this.renderCuratedResources();
+  }
+
+  escapeHtml(str) {
+    return String(str || '').replace(/[&<>"']/g, (ch) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[ch]));
+  }
+
+  showToast(message) {
+    let toast = document.getElementById('dday-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'dday-toast';
+      toast.className = 'dday-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('visible');
+    clearTimeout(this.toastTimer);
+    this.toastTimer = setTimeout(() => toast.classList.remove('visible'), 2200);
   }
 
   // Mini Calendar View
@@ -134,11 +175,20 @@ class DdayApp {
         createdAt: Date.now()
       };
       this.events.push(newEvent);
+      if (typeof gtag === 'function') {
+        const lang = window.i18n?.getCurrentLanguage?.() || 'en';
+        gtag('event', 'test_complete', {
+          app_name: 'dday-counter',
+          result_type: eventData.category || 'other',
+          lang
+        });
+      }
     }
 
     this.saveToStorage('events', this.events);
     this.renderEvents();
     this.renderStats();
+    this.renderMiniCalendar();
     this.hideForm();
   }
 
@@ -380,6 +430,13 @@ class DdayApp {
     // 오늘 날짜를 기본값으로 설정
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('eventDate').value = today;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'test_start', {
+        app_name: 'dday-counter',
+        lang: window.i18n?.getCurrentLanguage?.() || 'en'
+      });
+    }
   }
 
   // 폼 숨기기
@@ -387,7 +444,7 @@ class DdayApp {
     const formSection = document.getElementById('formSection');
     formSection.classList.add('hidden');
     document.getElementById('eventForm').reset();
-    document.querySelector('.form-title').textContent = '이벤트 추가';
+    document.querySelector('.form-title').textContent = this.tr('form.title', 'Add Event');
     this.editingId = null;
   }
 
@@ -403,7 +460,7 @@ class DdayApp {
     document.getElementById('eventCategory').value = event.category;
     document.getElementById('eventRepeat').checked = event.repeat || false;
 
-    document.querySelector('.form-title').textContent = '이벤트 수정';
+    document.querySelector('.form-title').textContent = this.tr('form.editTitle', 'Edit Event');
 
     const formSection = document.getElementById('formSection');
     formSection.classList.remove('hidden');
@@ -415,14 +472,16 @@ class DdayApp {
     return Promise.resolve();
   }
 
-  // 프리미엄 콘텐츠
+  // 일정 인사이트 모달
   async showPremiumContent() {
     if (this.events.length === 0) {
-      alert('먼저 이벤트를 추가해주세요.');
+      this.showToast(this.tr('messages.addEventFirst', 'Please add an event first.'));
       return;
     }
 
     const premiumBody = document.getElementById('premiumBody');
+    const premiumModal = document.getElementById('premiumModal');
+    if (!premiumBody || !premiumModal) return;
 
     // 이벤트 분석
     const upcomingEvents = this.events
@@ -448,48 +507,57 @@ class DdayApp {
 
     const mostCategory = Object.entries(categoryCount).sort((a, b) => b[1] - a[1])[0];
 
-    const tips = [
-      '목표까지 남은 날을 주 단위로 나누면 계획을 세우기 더 쉬워집니다.',
-      '중요한 이벤트 1주 전에 미리 체크리스트를 만들어보세요.',
-      'D-Day까지 매일 작은 준비를 하면 마지막에 여유를 가질 수 있습니다.',
-      '지난 이벤트를 돌아보면서 다음에는 더 나은 준비를 할 수 있습니다.',
-      '반복 이벤트를 설정하면 매년 중요한 날을 놓치지 않을 수 있습니다.'
+    const localeTips = window.i18n?.t?.('premium.tipsList');
+    const tips = Array.isArray(localeTips) && localeTips.length > 0 ? localeTips : [
+      'Dividing days by weeks makes planning easier.',
+      'Create a checklist one week before important events.',
+      'Daily small preparations reduce last-minute stress.',
+      'Reflect on past events to prepare better next time.',
+      'Setting yearly reminders ensures you never miss important dates.'
     ];
+
+    const weeksTpl = this.tr('premium.weeksRemaining', 'About <strong>{weeks} weeks</strong> remaining ({days} days)');
+    const weeksHtml = nearest && nearest.days > 0
+      ? weeksTpl.replace('{weeks}', Math.ceil(nearest.days / 7)).replace('{days}', nearest.days)
+      : '';
+
+    const safeNearestName = nearest ? this.escapeHtml(nearest.name) : '';
+    const catLabel = mostCategory
+      ? this.tr(`events.categoryNames.${mostCategory[0]}`, this.getCategoryName(mostCategory[0]))
+      : '';
 
     premiumBody.innerHTML = `
       ${nearest ? `
         <div class="premium-highlight">
-          <h3>가장 가까운 이벤트</h3>
+          <h3>${this.escapeHtml(this.tr('premium.nearestEvent', 'Nearest Event'))}</h3>
           <div class="premium-dday-card">
-            <span class="premium-dday-value">${this.formatDday(nearest.days)}</span>
-            <span class="premium-dday-name">${nearest.name}</span>
-            <span class="premium-dday-date">${this.formatDate(nearest.repeat ? this.getRepeatDate(nearest.date) : nearest.date)}</span>
+            <span class="premium-dday-value">${this.escapeHtml(this.formatDday(nearest.days))}</span>
+            <span class="premium-dday-name">${safeNearestName}</span>
+            <span class="premium-dday-date">${this.escapeHtml(this.formatDate(nearest.repeat ? this.getRepeatDate(nearest.date) : nearest.date))}</span>
           </div>
-          ${nearest.days > 0 ? `
-            <p class="premium-weeks">약 <strong>${Math.ceil(nearest.days / 7)}주</strong> 남았습니다 (${nearest.days}일)</p>
-          ` : '<p class="premium-today">오늘이 바로 그 날입니다!</p>'}
+          ${nearest.days > 0 ? `<p class="premium-weeks">${weeksHtml}</p>` : `<p class="premium-today">${this.escapeHtml(this.tr('premium.today', 'Today is the day!'))}</p>`}
         </div>
       ` : ''}
 
       <div class="premium-analysis-item">
-        <h3>이벤트 통계</h3>
-        <p>전체: ${this.events.length}개 / 다가오는: ${upcomingEvents.length}개 / 지난: ${passedEvents.length}개</p>
-        ${mostCategory ? `<p>가장 많은 카테고리: ${this.getCategoryEmoji(mostCategory[0])} ${this.getCategoryName(mostCategory[0])} (${mostCategory[1]}개)</p>` : ''}
+        <h3>${this.escapeHtml(this.tr('premium.stats', 'Event Statistics'))}</h3>
+        <p>${this.escapeHtml(this.tr('premium.total', 'Total'))}: ${this.events.length} / ${this.escapeHtml(this.tr('premium.upcoming', 'Upcoming'))}: ${upcomingEvents.length} / ${this.escapeHtml(this.tr('premium.passed', 'Passed'))}: ${passedEvents.length}</p>
+        ${mostCategory ? `<p>${this.escapeHtml(this.tr('premium.mostCategory', 'Most Common Category'))}: ${this.getCategoryEmoji(mostCategory[0])} ${this.escapeHtml(catLabel)} (${mostCategory[1]})</p>` : ''}
       </div>
 
       <div class="premium-analysis-item">
-        <h3>AI 시간 관리 팁</h3>
-        <p>${tips[Math.floor(Math.random() * tips.length)]}</p>
+        <h3>${this.escapeHtml(this.tr('premium.tips', 'Planning Tip'))}</h3>
+        <p>${this.escapeHtml(tips[Math.floor(Math.random() * tips.length)])}</p>
       </div>
 
       ${upcomingEvents.length > 1 ? `
         <div class="premium-analysis-item">
-          <h3>다가오는 이벤트 타임라인</h3>
+          <h3>${this.escapeHtml(this.tr('premium.timeline', 'Upcoming Events Timeline'))}</h3>
           <div class="premium-timeline">
             ${upcomingEvents.slice(0, 5).map(e => `
               <div class="timeline-item">
-                <span class="timeline-dday">${this.formatDday(e.days)}</span>
-                <span class="timeline-name">${this.getCategoryEmoji(e.category)} ${e.name}</span>
+                <span class="timeline-dday">${this.escapeHtml(this.formatDday(e.days))}</span>
+                <span class="timeline-name">${this.getCategoryEmoji(e.category)} ${this.escapeHtml(e.name)}</span>
               </div>
             `).join('')}
           </div>
@@ -497,7 +565,7 @@ class DdayApp {
       ` : ''}
     `;
 
-    document.getElementById('premiumModal').classList.remove('hidden');
+    premiumModal.classList.remove('hidden');
   }
 
   // 테마 설정
@@ -572,15 +640,284 @@ class DdayApp {
       this.showPremiumContent();
     });
 
-    // 프리미엄 모달 닫기
+    // 인사이트 모달 닫기
     document.getElementById('closePremiumBtn')?.addEventListener('click', () => {
       document.getElementById('premiumModal')?.classList.add('hidden');
     });
+
+    document.getElementById('premiumModal')?.addEventListener('click', (e) => {
+      if (e.target && e.target.id === 'premiumModal') {
+        e.target.classList.add('hidden');
+      }
+    });
+
+    document.getElementById('saveCardBtn')?.addEventListener('click', () => {
+      this.generateStoryCard();
+    });
+
+    document.getElementById('shareTwitterBtn')?.addEventListener('click', () => {
+      this.shareOnX();
+    });
+
+    document.getElementById('shareUrlBtn')?.addEventListener('click', () => {
+      this.copyShareUrl();
+    });
+  }
+
+  getShareUrl() {
+    const lang = window.i18n?.getCurrentLanguage?.() || 'en';
+    return `${window.location.origin}/dday-counter/?lang=${encodeURIComponent(lang)}&utm_source=share`;
+  }
+
+  shareOnX() {
+    const url = this.getShareUrl();
+    const text = this.tr('share.tweetText', 'Tracking important milestones and countdowns with DopaBrain D-Day Counter.');
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+    if (typeof gtag === 'function') {
+      gtag('event', 'share', {
+        method: 'twitter',
+        app_name: 'dday-counter',
+        lang: window.i18n?.getCurrentLanguage?.() || 'en'
+      });
+    }
+  }
+
+  async copyShareUrl() {
+    const url = this.getShareUrl();
+    const copied = this.tr('share.copied', 'Link copied!');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch (e) {}
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      ta.remove();
+    }
+    this.showToast(copied);
+    if (typeof gtag === 'function') {
+      gtag('event', 'share', {
+        method: 'clipboard',
+        app_name: 'dday-counter',
+        lang: window.i18n?.getCurrentLanguage?.() || 'en'
+      });
+    }
+  }
+
+  generateStoryCard() {
+    const canvas = document.getElementById('shareCanvas');
+    const saveBtn = document.getElementById('saveCardBtn');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const lang = window.i18n?.getCurrentLanguage?.() || 'en';
+    if (saveBtn) {
+      saveBtn.disabled = true;
+      saveBtn.textContent = this.tr('share.savingCard', 'Creating card...');
+    }
+
+    const w = 1080;
+    const h = 1920;
+    canvas.width = w;
+    canvas.height = h;
+
+    const grad = ctx.createLinearGradient(0, 0, w, h);
+    grad.addColorStop(0, '#0f172a');
+    grad.addColorStop(0.5, '#172554');
+    grad.addColorStop(1, '#0c4a6e');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.14)';
+    ctx.beginPath();
+    ctx.arc(540, 620, 320, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.7)';
+    ctx.lineWidth = 8;
+    ctx.beginPath();
+    ctx.arc(540, 620, 250, 0, Math.PI * 2);
+    ctx.stroke();
+
+    const upcoming = this.events
+      .map((e) => ({
+        ...e,
+        days: this.calculateDday(e.repeat ? this.getRepeatDate(e.date) : e.date)
+      }))
+      .filter((e) => e.days >= 0)
+      .sort((a, b) => a.days - b.days);
+
+    const nearest = upcoming[0];
+    const centerBadgeText = nearest ? this.formatDday(nearest.days) : 'D-Day';
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#7dd3fc';
+    ctx.font = 'bold 34px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardBadge', 'DOPABRAIN D-DAY TRACKER'), 540, 170);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 64px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardTitle', 'D-Day Milestone Card'), 540, 270);
+
+    ctx.fillStyle = '#bae6fd';
+    ctx.font = '34px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardSubtitle', 'Counting down to what matters most'), 540, 330);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 116px system-ui, -apple-system, sans-serif';
+    ctx.fillText(centerBadgeText, 540, 650);
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(110, 1020, 860, 420, 32);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#7dd3fc';
+    ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardNearestLabel', 'NEXT MILESTONE'), 175, 1110);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 42px system-ui, -apple-system, sans-serif';
+    const nearestTitle = nearest ? `${this.getCategoryEmoji(nearest.category)} ${nearest.name}`.slice(0, 26) : this.tr('share.cardDefaultNearest', 'Plan your upcoming dates');
+    ctx.fillText(nearestTitle, 175, 1175);
+
+    ctx.fillStyle = '#7dd3fc';
+    ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardSummaryLabel', 'TRACKING OVERVIEW'), 175, 1295);
+
+    ctx.fillStyle = '#e0f2fe';
+    ctx.font = 'bold 42px system-ui, -apple-system, sans-serif';
+    ctx.fillText(`${this.tr('stats.totalEvents', 'Total Events')}: ${this.events.length} | ${this.tr('stats.upcomingEvents', 'Upcoming')}: ${upcoming.length}`, 175, 1360);
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#e2e8f0';
+    ctx.font = 'bold 34px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.tr('share.cardCta', 'Track free at dopabrain.com/dday-counter'), 540, 1730);
+
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = '26px system-ui, -apple-system, sans-serif';
+    ctx.fillText(`dopabrain.com/dday-counter/?lang=${lang}`, 540, 1795);
+
+    try {
+      const dataUrl = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.download = 'dopabrain-dday-milestone.png';
+      a.href = dataUrl;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } catch (e) {}
+
+    this.showToast(this.tr('share.savedCard', 'Countdown card saved!'));
+    if (typeof gtag === 'function') {
+      gtag('event', 'save_image', {
+        app_name: 'dday-counter',
+        result_type: nearest ? (nearest.category || 'milestone') : 'planner_card',
+        lang
+      });
+    }
+
+    if (saveBtn) {
+      setTimeout(() => {
+        saveBtn.disabled = false;
+        saveBtn.textContent = this.tr('share.saveCard', 'Save Countdown Card');
+      }, 600);
+    }
+  }
+
+  renderCuratedResources() {
+    const container = document.getElementById('curated-resources-card');
+    if (!container) return;
+    const curated = window.i18n?.t?.('curated');
+    if (!curated || typeof curated !== 'object' || !Array.isArray(curated.books)) return;
+
+    const lang = window.i18n?.getCurrentLanguage?.() || 'en';
+    container.textContent = '';
+
+    const header = document.createElement('div');
+    header.className = 'curated-resources-header';
+    const titleEl = document.createElement('h3');
+    titleEl.className = 'curated-resources-title';
+    titleEl.textContent = curated.title || '';
+    const subEl = document.createElement('p');
+    subEl.className = 'curated-resources-subtitle';
+    subEl.textContent = curated.subtitle || '';
+    header.appendChild(titleEl);
+    header.appendChild(subEl);
+
+    const list = document.createElement('div');
+    list.className = 'curated-resources-list';
+
+    curated.books.forEach((book) => {
+      const link = document.createElement('a');
+      link.className = 'curated-book-link';
+      link.href = book.url;
+      link.target = '_blank';
+      link.rel = 'sponsored noopener noreferrer';
+
+      const meta = document.createElement('div');
+      meta.className = 'curated-book-meta';
+
+      const bTitle = document.createElement('span');
+      bTitle.className = 'curated-book-title';
+      bTitle.textContent = book.title || '';
+
+      const bAuthor = document.createElement('span');
+      bAuthor.className = 'curated-book-author';
+      bAuthor.textContent = book.author || '';
+
+      const bNote = document.createElement('span');
+      bNote.className = 'curated-book-note';
+      bNote.textContent = book.note || '';
+
+      meta.appendChild(bTitle);
+      meta.appendChild(bAuthor);
+      meta.appendChild(bNote);
+
+      const badge = document.createElement('span');
+      badge.className = 'curated-book-badge';
+      badge.textContent = curated.badge || 'Book';
+
+      link.appendChild(meta);
+      link.appendChild(badge);
+
+      link.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'curated_resource_click', {
+            app_name: 'dday-counter',
+            resource_type: 'book',
+            item_id: book.id || 'book',
+            lang
+          });
+        }
+      });
+
+      list.appendChild(link);
+    });
+
+    const noteEl = document.createElement('p');
+    noteEl.className = 'curated-affiliate-note';
+    noteEl.textContent = curated.affiliateNote || '';
+
+    container.appendChild(header);
+    container.appendChild(list);
+    container.appendChild(noteEl);
   }
 }
 
 // 앱 초기화
 const app = new DdayApp();
+window.ddayApp = app;
 preserveLanguageLinks();
 
 function preserveLanguageLinks() {
@@ -599,12 +936,13 @@ function preserveLanguageLinks() {
       if (!a.__ctaBound) {
         a.__ctaBound = true;
         a.addEventListener('click', function() {
+          const liveLang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
           if (typeof gtag === 'function') {
             gtag('event', 'content_cta_click', {
               cta_surface: 'related_tools',
               destination: a.getAttribute('href'),
               source: 'dday_counter_result',
-              lang: lang || 'en'
+              lang: liveLang
             });
           }
         });

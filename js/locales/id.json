@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "Analisis Mendalam D-Day AI",
-    "title": "Analisis Mendalam D-Day AI",
+    "button": "Wawasan Jadwal D-Day",
+    "title": "Wawasan Jadwal D-Day",
     "nearestEvent": "Acara Terdekat",
     "stats": "Statistik Acara",
-    "tips": "Tips Manajemen Waktu AI",
+    "tips": "Tips Manajemen Waktu",
     "timeline": "Garis Waktu Acara Mendatang",
     "weeksRemaining": "Sekitar <strong>{weeks} minggu</strong> tersisa ({days} hari)",
     "today": "Hari ini adalah harinya!",
@@ -69,7 +69,8 @@
       "Persiapan kecil setiap hari mengurangi stres menit terakhir.",
       "Renungkan acara masa lalu untuk mempersiapkan diri lebih baik lagi.",
       "Mengatur pengingat tahunan memastikan Anda tidak pernah melewatkan tanggal penting."
-    ]
+    ],
+    "badge": "WAWASAN"
   },
   "stats": {
     "title": "Statistik",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "Apakah Anda yakin ingin menghapus acara ini?",
-    "addEventFirst": "Silakan tambah acara terlebih dahulu."
+    "addEventFirst": "Tambahkan acara terlebih dahulu."
   },
   "calendar": {
     "title": "📅 Jadwal Bulan Ini"
@@ -107,9 +108,20 @@
     "skipMain": "Lewati ke konten utama"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 Salin URL",
-    "copied": "✅ Disalin!"
+    "twitter": "Bagikan ke X",
+    "copyUrl": "Salin Tautan",
+    "copied": "Tautan disalin!",
+    "saveCard": "Simpan Kartu D-Day",
+    "savingCard": "Membuat...",
+    "savedCard": "Kartu D-Day tersimpan!",
+    "tweetText": "Memantau tanggal penting dan hitung mundur di DopaBrain D-Day Counter.",
+    "cardBadge": "DOPABRAIN D-DAY",
+    "cardTitle": "Kartu Target D-Day",
+    "cardSubtitle": "Menghitung mundur momen paling bermakna",
+    "cardNearestLabel": "ACARA TERDEKAT",
+    "cardSummaryLabel": "RINGKASAN",
+    "cardDefaultNearest": "Jadwalkan tanggal penting berikutnya",
+    "cardCta": "Gratis di dopabrain.com/dday-counter"
   },
   "related": {
     "title": "Jelajahi lainnya",
@@ -138,5 +150,27 @@
     "a4": "Ya, Anda dapat mengategorikan ke 6 jenis: ulang tahun, peringatan, ujian, perjalanan, kerja, dan lainnya.",
     "q5": "Apakah aplikasi ini gratis?",
     "a5": "Ya, sepenuhnya gratis. Semua fitur tersedia tanpa biaya."
+  },
+  "curated": {
+    "title": "Bacaan Perencanaan Waktu",
+    "subtitle": "Buku panduan untuk menyusun prioritas dan tenggat waktu penting",
+    "badge": "Buku",
+    "affiliateNote": "Memuat tautan referensi buku untuk mendukung alat gratis DopaBrain.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "Four Thousand Weeks: Manajemen Waktu",
+        "author": "Oliver Burkeman",
+        "note": "Sudut pandang jernih dalam memilih hal terpenting di waktu yang terbatas.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "Getting Things Done",
+        "author": "David Allen",
+        "note": "Sistem rapi tanpa stres untuk mengatur jadwal dan proyek mendatang.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

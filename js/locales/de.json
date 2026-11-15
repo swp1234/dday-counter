@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "KI D-Day Tiefenanalyse",
-    "title": "KI D-Day Tiefenanalyse",
+    "button": "D-Day Zeitplan-Einblicke",
+    "title": "D-Day Zeitplan-Einblicke",
     "nearestEvent": "Nächstes Ereignis",
     "stats": "Ereignisstatistik",
-    "tips": "KI Zeitmanagement-Tipp",
+    "tips": "Planungs-Tipp",
     "timeline": "Kommende Ereignisse-Zeitleiste",
     "weeksRemaining": "Ungefähr <strong>{weeks} Wochen</strong> verbleibend ({days} Tage)",
     "today": "Heute ist der Tag!",
@@ -69,7 +69,8 @@
       "Tägliche kleine Vorbereitungen reduzieren Stress in letzter Minute.",
       "Reflektiere über vergangene Ereignisse um besser für die nächste Zeit vorbereitet zu sein.",
       "Das Setzen von jährlichen Erinnerungen stellt sicher, dass du nie wichtige Daten vergisst."
-    ]
+    ],
+    "badge": "EINBLICK"
   },
   "stats": {
     "title": "Statistik",
@@ -107,9 +108,20 @@
     "skipMain": "Zum Hauptinhalt"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 URL kopieren",
-    "copied": "✅ Kopiert!"
+    "twitter": "Auf X teilen",
+    "copyUrl": "Link kopieren",
+    "copied": "Link kopiert!",
+    "saveCard": "Karte speichern",
+    "savingCard": "Wird erstellt...",
+    "savedCard": "Countdown-Karte gespeichert!",
+    "tweetText": "Wichtige Termine und Countdowns im DopaBrain D-Day Counter im Blick behalten.",
+    "cardBadge": "DOPABRAIN D-DAY",
+    "cardTitle": "D-Day Meilenstein-Karte",
+    "cardSubtitle": "Wichtige Ziele strukturiert planen",
+    "cardNearestLabel": "NÄCHSTER TERMIN",
+    "cardSummaryLabel": "ÜBERSICHT",
+    "cardDefaultNearest": "Plane deinen nächsten Meilenstein",
+    "cardCta": "Kostenlos auf dopabrain.com/dday-counter"
   },
   "related": {
     "title": "Mehr entdecken",
@@ -138,5 +150,27 @@
     "a4": "Ja, Sie können Ereignisse in 6 Typen einteilen: Geburtstag, Jubiläum, Prüfung, Reise, Arbeit und Sonstiges.",
     "q5": "Ist diese App kostenlos?",
     "a5": "Ja, völlig kostenlos. Alle Funktionen stehen kostenlos zur Verfügung."
+  },
+  "curated": {
+    "title": "Empfohlene Zeitplanungs-Bücher",
+    "subtitle": "Praxisliteratur zu Zeithorizonten, Prioritäten und klaren Terminen",
+    "badge": "Buchtipp",
+    "affiliateNote": "Enthält Buchempfehlungs-Links zur Unterstützung kostenloser DopaBrain-Tools.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "4.000 Wochen (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "Ein klarer Blick auf Prioritäten und bewusstes Zeitmanagement.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "Wie ich die Dinge geregelt kriege (GTD)",
+        "author": "David Allen",
+        "note": "Stressfreie Selbstorganisation für anstehende Deadlines und Projekte.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "AI D-Day Deep Analysis",
-    "title": "AI D-Day Deep Analysis",
+    "button": "D-Day Schedule Insights",
+    "title": "D-Day Schedule Insights",
     "nearestEvent": "Nearest Event",
     "stats": "Event Statistics",
-    "tips": "AI Time Management Tip",
+    "tips": "Planning Tip",
     "timeline": "Upcoming Events Timeline",
     "weeksRemaining": "About <strong>{weeks} weeks</strong> remaining ({days} days)",
     "today": "Today is the day!",
@@ -69,7 +69,8 @@
       "Daily small preparations reduce last-minute stress.",
       "Reflect on past events to prepare better next time.",
       "Setting yearly reminders ensures you never miss important dates."
-    ]
+    ],
+    "badge": "INSIGHTS"
   },
   "stats": {
     "title": "Statistics",
@@ -107,9 +108,20 @@
     "skipMain": "Skip to main content"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 Copy URL",
-    "copied": "✅ Copied!"
+    "twitter": "Share on X",
+    "copyUrl": "Copy Link",
+    "copied": "Link copied!",
+    "saveCard": "Save Countdown Card",
+    "savingCard": "Creating card...",
+    "savedCard": "Countdown card saved!",
+    "tweetText": "Tracking important milestones and countdowns with DopaBrain D-Day Counter.",
+    "cardBadge": "DOPABRAIN D-DAY TRACKER",
+    "cardTitle": "D-Day Milestone Card",
+    "cardSubtitle": "Counting down to what matters most",
+    "cardNearestLabel": "NEXT MILESTONE",
+    "cardSummaryLabel": "TRACKING OVERVIEW",
+    "cardDefaultNearest": "Plan your upcoming dates",
+    "cardCta": "Track free at dopabrain.com/dday-counter"
   },
   "related": {
     "title": "More to Explore",
@@ -138,5 +150,27 @@
     "a4": "Yes, you can categorize events into 6 types: birthday, anniversary, exam, travel, work, and other.",
     "q5": "Is this app free?",
     "a5": "Yes, it is completely free. All features including unlimited events, category management, and mini calendar are available at no cost."
+  },
+  "curated": {
+    "title": "Mindful Time Horizon Guides",
+    "subtitle": "Books on intentional time planning and milestone clarity",
+    "badge": "Book Pick",
+    "affiliateNote": "Contains book referral links supporting DopaBrain free tools.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "Four Thousand Weeks: Time Management for Mortals",
+        "author": "Oliver Burkeman",
+        "note": "A clarifying perspective on spending finite time on meaningful milestones.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "Getting Things Done",
+        "author": "David Allen",
+        "note": "Stress-free systems for organizing upcoming commitments and deadlines.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

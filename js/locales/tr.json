@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "YZ D-Day Derinlemesine Analizi",
-    "title": "YZ D-Day Derinlemesine Analizi",
+    "button": "D-Day Takvim Analizi",
+    "title": "D-Day Takvim Analizi",
     "nearestEvent": "En Yakın Etkinlik",
     "stats": "Etkinlik İstatistikleri",
-    "tips": "YZ Zaman Yönetimi İpucu",
+    "tips": "Planlama İpucu",
     "timeline": "Yaklaşan Etkinlikler Zaman Çizelgesi",
     "weeksRemaining": "Yaklaşık <strong>{weeks} hafta</strong> kaldı ({days} gün)",
     "today": "Bugün o gün!",
@@ -69,7 +69,8 @@
       "Günlük küçük hazırlıklar son dakika stresini azaltır.",
       "Geçmiş etkinlikleri düşünerek daha iyi hazırlanabilirsin.",
       "Yıllık hatırlatıcılar ayarlamak önemli tarihleri asla kaçırmanı sağlar."
-    ]
+    ],
+    "badge": "ANALİZ"
   },
   "stats": {
     "title": "İstatistikler",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "Bu etkinliği silmek istediğine emin misin?",
-    "addEventFirst": "Lütfen önce bir etkinlik ekle."
+    "addEventFirst": "Lütfen önce bir etkinlik ekleyin."
   },
   "calendar": {
     "title": "📅 Bu Ayın Takvimi"
@@ -107,9 +108,20 @@
     "skipMain": "Ana içeriğe geç"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 URL Kopyala",
-    "copied": "✅ Kopyalandı!"
+    "twitter": "X'te Paylaş",
+    "copyUrl": "Bağlantıyı Kopyala",
+    "copied": "Bağlantı kopyalandı!",
+    "saveCard": "Kartı Kaydet",
+    "savingCard": "Oluşturuluyor...",
+    "savedCard": "Geri sayım kartı kaydedildi!",
+    "tweetText": "Önemli günleri ve geri sayımları DopaBrain D-Day Sayacı ile takip ediyorum.",
+    "cardBadge": "DOPABRAIN D-DAY",
+    "cardTitle": "D-Day Hedef Kartı",
+    "cardSubtitle": "Önemli anlara kalan süreyi takip et",
+    "cardNearestLabel": "YAKLAŞAN HEDEF",
+    "cardSummaryLabel": "GENEL BAKIŞ",
+    "cardDefaultNearest": "Sıradaki önemli tarihi planla",
+    "cardCta": "Ücretsiz: dopabrain.com/dday-counter"
   },
   "related": {
     "title": "Daha fazla keşfet",
@@ -138,5 +150,27 @@
     "a4": "Evet, doğum günü, yıldönümü, sınav, seyahat, iş ve diğer olmak üzere 6 kategoriye ayırabilirsiniz.",
     "q5": "Bu uygulama ücretsiz mi?",
     "a5": "Evet, tamamen ücretsizdir. Tüm özellikler ücretsiz olarak kullanılabilir."
+  },
+  "curated": {
+    "title": "Zaman Ufku Okumaları",
+    "subtitle": "Bilinçli planlama ve önemli tarih yönetimi üzerine seçkin kitaplar",
+    "badge": "Kitap",
+    "affiliateNote": "DopaBrain ücretsiz araçlarını destekleyen kitap yönlendirme bağlantıları içerir.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "Dört Bin Hafta (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "Sınırlı zamanı gerçekten anlamlı hedeflere ayırma perspektifi.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "İşleri Yoluna Koymak (Getting Things Done)",
+        "author": "David Allen",
+        "note": "Yaklaşan teslim tarihlerini ve görevleri stressiz düzenleme sistemi.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "AI D-Day深い分析",
-    "title": "AI D-Day深い分析",
+    "button": "D-Day スケジュール分析",
+    "title": "D-Day スケジュール分析",
     "nearestEvent": "最も近いイベント",
     "stats": "イベント統計",
-    "tips": "AI時間管理のコツ",
+    "tips": "計画のヒント",
     "timeline": "今後のイベントタイムライン",
     "weeksRemaining": "残り約<strong>{weeks}週間</strong>（{days}日）",
     "today": "今日がその日です！",
@@ -69,7 +69,8 @@
       "日々の小さな準備が直前の焦りを軽減します。",
       "過去のイベントを振り返り、次の準備に活かします。",
       "毎年のリマインダーを設定して、重要な日を絶対に忘れません。"
-    ]
+    ],
+    "badge": "インサイト"
   },
   "stats": {
     "title": "統計",
@@ -107,9 +108,20 @@
     "skipMain": "メインコンテンツへ"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 URLコピー",
-    "copied": "✅ コピー済み!"
+    "twitter": "Xで共有",
+    "copyUrl": "リンクをコピー",
+    "copied": "リンクをコピーしました！",
+    "saveCard": "カウントダウン画像を保存",
+    "savingCard": "作成中...",
+    "savedCard": "カードを保存しました！",
+    "tweetText": "大切な記念日や試験の予定を DopaBrain D-Day カウンターで管理中。",
+    "cardBadge": "DOPABRAIN D-DAY トラッカー",
+    "cardTitle": "D-Day マイルストーン",
+    "cardSubtitle": "大切な予定へのカウントダウン",
+    "cardNearestLabel": "直近のイベント",
+    "cardSummaryLabel": "登録概要",
+    "cardDefaultNearest": "次の大切な予定を登録しましょう",
+    "cardCta": "dopabrain.com/dday-counter で無料管理"
   },
   "related": {
     "title": "もっと楽しむ",
@@ -138,5 +150,27 @@
     "a4": "はい、誕生日、記念日、試験、旅行、仕事、その他の6つのカテゴリに分類できます。",
     "q5": "このアプリは無料ですか？",
     "a5": "はい、完全に無料です。すべての機能を無料で利用できます。"
+  },
+  "curated": {
+    "title": "時間設計と目標達成のおすすめ書籍",
+    "subtitle": "限られた時間を大切な節目に活かす定番書",
+    "badge": "書籍案内",
+    "affiliateNote": "無料ツール運営を支える紹介リンクが含まれています。",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "限りある時間の使い方 (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "人生の残り週数を見つめ直し、本当に大切な予定を選ぶ視点。",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "はじめてのGTD ストレスフリーの整理術",
+        "author": "David Allen",
+        "note": "期限やタスクを頭の外に出して確実に進める実践メソッド。",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

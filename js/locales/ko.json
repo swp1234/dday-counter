@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "AI D-Day 심층 분석",
-    "title": "AI D-Day 심층 분석",
+    "button": "D-Day 일정 인사이트",
+    "title": "D-Day 일정 인사이트",
     "nearestEvent": "가장 가까운 이벤트",
     "stats": "이벤트 통계",
-    "tips": "AI 시간 관리 팁",
+    "tips": "일정 관리 팁",
     "timeline": "다가오는 이벤트 타임라인",
     "weeksRemaining": "약 <strong>{weeks}주</strong> 남았습니다 ({days}일)",
     "today": "오늘이 바로 그 날입니다!",
@@ -69,7 +69,8 @@
       "D-Day까지 매일 작은 준비를 하면 마지막에 여유를 가질 수 있습니다.",
       "지난 이벤트를 돌아보면서 다음에는 더 나은 준비를 할 수 있습니다.",
       "반복 이벤트를 설정하면 매년 중요한 날을 놓치지 않을 수 있습니다."
-    ]
+    ],
+    "badge": "인사이트"
   },
   "stats": {
     "title": "통계",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "이 이벤트를 삭제하시겠습니까?",
-    "addEventFirst": "먼저 이벤트를 추가해주세요."
+    "addEventFirst": "먼저 이벤트를 추가해 주세요."
   },
   "calendar": {
     "title": "📅 이번 달 일정"
@@ -107,9 +108,20 @@
     "skipMain": "본문으로 이동"
   },
   "share": {
-    "twitter": "트위터",
-    "copyUrl": "📋 URL 복사",
-    "copied": "✅ 복사됨!"
+    "twitter": "X에 공유",
+    "copyUrl": "링크 복사",
+    "copied": "D-Day 링크가 복사되었습니다!",
+    "saveCard": "카운트다운 카드 저장",
+    "savingCard": "카드 생성 중...",
+    "savedCard": "카운트다운 카드가 저장되었습니다!",
+    "tweetText": "중요한 시험과 기념일 일정을 DopaBrain D-Day 카운터로 깔끔하게 관리해 보세요.",
+    "cardBadge": "DOPABRAIN D-DAY 트래커",
+    "cardTitle": "D-Day 마일스톤 카드",
+    "cardSubtitle": "중요한 순간까지 남은 시간을 한눈에",
+    "cardNearestLabel": "다가오는 일정",
+    "cardSummaryLabel": "등록 현황",
+    "cardDefaultNearest": "중요한 목표 날짜를 등록해 보세요",
+    "cardCta": "dopabrain.com/dday-counter에서 무료 관리"
   },
   "related": {
     "title": "더 많은 콘텐츠",
@@ -138,5 +150,27 @@
     "a4": "네, 생일, 기념일, 시험, 여행, 업무, 기타 등 6가지 카테고리로 이벤트를 분류할 수 있습니다.",
     "q5": "이 앱은 무료인가요?",
     "a5": "네, 완전 무료입니다. 무제한 이벤트 등록, 카테고리 관리, 미니 캘린더 등 모든 기능을 무료로 이용할 수 있습니다."
+  },
+  "curated": {
+    "title": "목표 일정과 시간 설계 추천 도서",
+    "subtitle": "유한한 시간을 의미 있는 마일스톤에 쓰기 위한 필독서",
+    "badge": "추천 도서",
+    "affiliateNote": "도서 링크에는 DopaBrain 무료 도구 운영을 지원하는 제휴 링크가 포함됩니다.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "4000주 (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "인생의 유한한 시간을 가장 중요한 우선순위에 배치하는 통찰.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "끝도 없이 쌓이는 일 완벽하게 해내는 법 (GTD)",
+        "author": "David Allen",
+        "note": "다가오는 마감과 목표를 스트레스 없이 체계화하는 실전 프레임워크.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

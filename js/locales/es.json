@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "Análisis Profundo D-Day de IA",
-    "title": "Análisis Profundo D-Day de IA",
+    "button": "Resumen de Agenda D-Day",
+    "title": "Resumen de Agenda D-Day",
     "nearestEvent": "Evento Más Próximo",
     "stats": "Estadísticas de Eventos",
-    "tips": "Consejo de Gestión del Tiempo de IA",
+    "tips": "Consejo de planificación",
     "timeline": "Cronología de Próximos Eventos",
     "weeksRemaining": "Aproximadamente <strong>{weeks} semanas</strong> restantes ({days} días)",
     "today": "¡Hoy es el día!",
@@ -69,7 +69,8 @@
       "Las pequeñas preparaciones diarias reducen el estrés de último minuto.",
       "Reflexiona sobre eventos pasados para prepararte mejor la próxima vez.",
       "Establecer recordatorios anuales asegura que nunca pierdas fechas importantes."
-    ]
+    ],
+    "badge": "RESUMEN"
   },
   "stats": {
     "title": "Estadísticas",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "¿Estás seguro de que quieres eliminar este evento?",
-    "addEventFirst": "Por favor, agrega un evento primero."
+    "addEventFirst": "Agrega primero un evento."
   },
   "calendar": {
     "title": "📅 Calendario de Este Mes"
@@ -107,9 +108,20 @@
     "skipMain": "Ir al contenido principal"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 Copiar URL",
-    "copied": "✅ ¡Copiado!"
+    "twitter": "Compartir en X",
+    "copyUrl": "Copiar enlace",
+    "copied": "¡Enlace copiado!",
+    "saveCard": "Guardar Tarjeta",
+    "savingCard": "Creando...",
+    "savedCard": "¡Tarjeta guardada!",
+    "tweetText": "Organizando fechas clave y cuentas regresivas en DopaBrain D-Day Counter.",
+    "cardBadge": "DOPABRAIN D-DAY",
+    "cardTitle": "Hitos D-Day",
+    "cardSubtitle": "Cuenta regresiva hacia tus metas",
+    "cardNearestLabel": "PRÓXIMO HITO",
+    "cardSummaryLabel": "RESUMEN DE AGENDA",
+    "cardDefaultNearest": "Planifica tu próxima fecha clave",
+    "cardCta": "Gratis en dopabrain.com/dday-counter"
   },
   "related": {
     "title": "Explora más",
@@ -138,5 +150,27 @@
     "a4": "Sí, puedes categorizar en 6 tipos: cumpleaños, aniversario, examen, viaje, trabajo y otros.",
     "q5": "¿Esta app es gratis?",
     "a5": "Sí, completamente gratis. Todas las funciones disponibles sin costo."
+  },
+  "curated": {
+    "title": "Lecturas sobre Horizonte Temporal",
+    "subtitle": "Libros clave para planificar fechas límite con claridad y enfoque",
+    "badge": "Libro",
+    "affiliateNote": "Incluye enlaces de referencia que apoyan las herramientas gratuitas de DopaBrain.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "Cuatro Mil Semanas (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "Una mirada lúcida sobre cómo dedicar tiempo finito a lo verdaderamente valioso.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "Organízate con eficacia (Getting Things Done)",
+        "author": "David Allen",
+        "note": "Sistema práctico para gestionar compromisos y metas sin estrés.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "AI D-Day 深度分析",
-    "title": "AI D-Day 深度分析",
+    "button": "D-Day 日程洞察",
+    "title": "D-Day 日程洞察",
     "nearestEvent": "最近的事件",
     "stats": "事件统计",
-    "tips": "AI 时间管理建议",
+    "tips": "日程规划建议",
     "timeline": "即将发生的事件时间线",
     "weeksRemaining": "约 <strong>{weeks}周</strong> 剩余 ({days}天)",
     "today": "今天就是那一天！",
@@ -69,7 +69,8 @@
       "每天做小的准备可以减少最后时刻的压力。",
       "反思过去的事件以便下次做得更好。",
       "设置年度提醒确保不会错过重要日期。"
-    ]
+    ],
+    "badge": "洞察"
   },
   "stats": {
     "title": "统计",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "确定要删除此事件吗？",
-    "addEventFirst": "请先添加事件。"
+    "addEventFirst": "请先添加一个重要日期。"
   },
   "calendar": {
     "title": "📅 本月日程"
@@ -107,9 +108,20 @@
     "skipMain": "跳到主内容"
   },
   "share": {
-    "twitter": "推特",
-    "copyUrl": "📋 复制链接",
-    "copied": "✅ 已复制!"
+    "twitter": "分享到 X",
+    "copyUrl": "复制链接",
+    "copied": "链接已复制！",
+    "saveCard": "保存倒数卡片",
+    "savingCard": "正在生成...",
+    "savedCard": "倒数卡片已保存！",
+    "tweetText": "使用 DopaBrain D-Day 倒数日记录纪念日、考试与重要里程碑。",
+    "cardBadge": "DOPABRAIN 倒数日追踪",
+    "cardTitle": "重要日程里程碑",
+    "cardSubtitle": "清晰掌握每一个值得期待的日子",
+    "cardNearestLabel": "最近里程碑",
+    "cardSummaryLabel": "追踪概览",
+    "cardDefaultNearest": "添加你的下一个重要目标日",
+    "cardCta": "前往 dopabrain.com/dday-counter 免费使用"
   },
   "related": {
     "title": "探索更多",
@@ -138,5 +150,27 @@
     "a4": "是的，您可以将事件分为6种类别：生日、纪念日、考试、旅行、工作和其他。",
     "q5": "这个应用免费吗？",
     "a5": "是的，完全免费。所有功能包括无限事件、分类管理和迷你日历均免费。"
+  },
+  "curated": {
+    "title": "时间视野与日程规划书单",
+    "subtitle": "聚焦人生有限时间与高效截止日管理的经典好书",
+    "badge": "精选图书",
+    "affiliateNote": "包含支持 DopaBrain 免费工具运营的推荐图书链接。",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "四千周：凡人的时间管理 (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "以有限生命跨度为尺度，将精力投向真正重要的里程碑。",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "搞定 (Getting Things Done)",
+        "author": "David Allen",
+        "note": "建立无压力的待办与目标日历追踪系统的实用指南。",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

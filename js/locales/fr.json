@@ -51,11 +51,11 @@
     }
   },
   "premium": {
-    "button": "Analyse Profonde D-Day IA",
-    "title": "Analyse Profonde D-Day IA",
+    "button": "Aperçu du Calendrier D-Day",
+    "title": "Aperçu du Calendrier D-Day",
     "nearestEvent": "Événement Plus Proche",
     "stats": "Statistiques des Événements",
-    "tips": "Conseil de Gestion du Temps IA",
+    "tips": "Conseil d’organisation",
     "timeline": "Chronologie des Événements à Venir",
     "weeksRemaining": "Environ <strong>{weeks} semaines</strong> restantes ({days} jours)",
     "today": "Aujourd'hui c'est le jour!",
@@ -69,7 +69,8 @@
       "Les petites préparations quotidiennes réduisent le stress de dernière minute.",
       "Réfléchis aux événements passés pour te préparer mieux la prochaine fois.",
       "Définir des rappels annuels garantit que tu ne manques jamais les dates importantes."
-    ]
+    ],
+    "badge": "APERÇU"
   },
   "stats": {
     "title": "Statistiques",
@@ -87,7 +88,7 @@
   },
   "messages": {
     "confirm": "Es-tu sûr de vouloir supprimer cet événement?",
-    "addEventFirst": "S'il te plaît, ajoute d'abord un événement."
+    "addEventFirst": "Veuillez d’abord ajouter un événement."
   },
   "calendar": {
     "title": "📅 Calendrier de Ce Mois"
@@ -107,9 +108,20 @@
     "skipMain": "Aller au contenu principal"
   },
   "share": {
-    "twitter": "Twitter",
-    "copyUrl": "📋 Copier URL",
-    "copied": "✅ Copié!"
+    "twitter": "Partager sur X",
+    "copyUrl": "Copier le lien",
+    "copied": "Lien copié !",
+    "saveCard": "Enregistrer la carte",
+    "savingCard": "Création...",
+    "savedCard": "Carte enregistrée !",
+    "tweetText": "Suivre mes échéances et dates clés sur DopaBrain D-Day Counter.",
+    "cardBadge": "DOPABRAIN D-DAY",
+    "cardTitle": "Carte Jalons D-Day",
+    "cardSubtitle": "Comptez les jours jusqu’aux moments clés",
+    "cardNearestLabel": "PROCHAIN JALON",
+    "cardSummaryLabel": "VUE D’ENSEMBLE",
+    "cardDefaultNearest": "Planifiez votre prochaine date clé",
+    "cardCta": "Gratuit sur dopabrain.com/dday-counter"
   },
   "related": {
     "title": "À découvrir",
@@ -138,5 +150,27 @@
     "a4": "Oui, vous pouvez catégoriser en 6 types : anniversaire, commémoration, examen, voyage, travail et autre.",
     "q5": "Cette application est-elle gratuite ?",
     "a5": "Oui, entièrement gratuit. Toutes les fonctionnalités sont disponibles sans frais."
+  },
+  "curated": {
+    "title": "Lectures sur la gestion du temps",
+    "subtitle": "Ouvrages de référence pour planifier vos échéances avec sérénité",
+    "badge": "Livre",
+    "affiliateNote": "Contient des liens de recommandation soutenant les outils gratuits DopaBrain.",
+    "books": [
+      {
+        "id": "four-thousand-weeks",
+        "title": "4000 semaines (Four Thousand Weeks)",
+        "author": "Oliver Burkeman",
+        "note": "Une perspective lucide sur l’art de choisir ce qui compte vraiment.",
+        "url": "https://www.amazon.com/dp/0374159122?tag=dopabrain-20"
+      },
+      {
+        "id": "getting-things-done",
+        "title": "S’organiser pour réussir (GTD)",
+        "author": "David Allen",
+        "note": "Une méthode éprouvée pour maîtriser vos délais sans stress.",
+        "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
+      }
+    ]
   }
 }

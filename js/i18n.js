@@ -38,14 +38,27 @@ class I18n {
         localStorage.setItem('app_language', lang);
         document.documentElement.lang = lang;
         this.updateUI();
+        if (window.ddayApp && typeof window.ddayApp.onLanguageChange === 'function') {
+            window.ddayApp.onLanguageChange();
+        }
         return true;
     }
     updateUI() {
-        document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = this.t(el.getAttribute('data-i18n')); });
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = this.t(el.getAttribute('data-i18n-placeholder')); });
-        document.title = this.t('app.title');
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = this.t(key);
+            if (val && val !== key) el.textContent = val;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            const val = this.t(key);
+            if (val && val !== key) el.placeholder = val;
+        });
+        const titleVal = this.t('app.title');
+        if (titleVal && titleVal !== 'app.title') document.title = titleVal;
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.content = this.t('app.description');
+        const descVal = this.t('app.description');
+        if (meta && descVal && descVal !== 'app.description') meta.content = descVal;
         if (typeof preserveLanguageLinks === 'function') preserveLanguageLinks();
     }
     getCurrentLanguage() { return this.currentLang; }
@@ -68,3 +81,4 @@ class I18n {
     }
 }
 const i18n = new I18n();
+window.i18n = i18n;
