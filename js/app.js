@@ -211,12 +211,19 @@ class DdayApp {
 
   // 이벤트 삭제
   deleteEvent(id) {
-    if (confirm(window.i18n?.t('messages.confirm') || 'Delete this event?')) {
-      this.events = this.events.filter(e => e.id !== id);
-      this.saveToStorage('events', this.events);
-      this.renderEvents();
-      this.renderStats();
+    if (this._pendingDeleteId !== id) {
+      this._pendingDeleteId = id;
+      this.showToast(window.i18n?.t('messages.confirm') || 'Tap again to delete this event.');
+      clearTimeout(this._deleteConfirmTimer);
+      this._deleteConfirmTimer = setTimeout(() => { this._pendingDeleteId = null; }, 3000);
+      return;
     }
+    this._pendingDeleteId = null;
+    clearTimeout(this._deleteConfirmTimer);
+    this.events = this.events.filter(e => e.id !== id);
+    this.saveToStorage('events', this.events);
+    this.renderEvents();
+    this.renderStats();
   }
 
   // 이벤트 정렬
