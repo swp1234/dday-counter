@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Arquétipo do Eu Futuro",
+    "desc": "Transforme sua reflexão de hoje em um mapa de prioridades para 10 anos em 8 perguntas.",
+    "cta": "Explorar Eu Futuro →"
   }
 }

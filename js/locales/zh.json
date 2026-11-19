@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "推荐下一步",
+    "title": "10年后的未来自我原型",
+    "desc": "通过8道题梳理你的10年长期优先级与精力方向。",
+    "cta": "探索未来自我 →"
   }
 }

@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Empfohlener nächster Schritt",
+    "title": "Zukunfts-Ich in 10 Jahren",
+    "desc": "Verwandle deine heutige Reflexion in 8 Fragen in eine klare 10-Jahres-Perspektive.",
+    "cta": "Zukunfts-Ich testen →"
   }
 }

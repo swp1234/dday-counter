@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Siguiente paso recomendado",
+    "title": "Arquetipo de tu Yo Futuro",
+    "desc": "Convierte tu reflexión de hoy en un mapa de prioridades a 10 años en 8 preguntas.",
+    "cta": "Explorar Yo Futuro →"
   }
 }

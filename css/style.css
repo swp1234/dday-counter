@@ -1279,3 +1279,71 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
   opacity: 1;
   transform: translate(-50%, 0);
 }
+
+/* ===== Next-Step Hero Funnel Card ===== */
+.next-step-card {
+  max-width: 680px;
+  width: 100%;
+  margin: 22px auto;
+  padding: 20px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16), rgba(14, 165, 233, 0.1));
+  border: 1px solid rgba(167, 139, 250, 0.38);
+  text-align: left;
+  box-sizing: border-box;
+}
+.next-step-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin: 0 0 10px;
+}
+.next-step-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.next-step-emoji {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.next-step-content {
+  min-width: 0;
+  flex: 1;
+}
+.next-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.next-step-desc {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  opacity: 0.85;
+  margin: 0;
+}
+.next-step-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.next-step-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}

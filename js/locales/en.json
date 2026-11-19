@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "10-Year Future Self Archetype",
+    "desc": "Turn today’s reflection into a 10-year roadmap of priorities and energy direction in 8 questions.",
+    "cta": "Explore Future Self →"
   }
 }

@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Önerilen Sonraki Adım",
+    "title": "10 Yıllık Gelecekteki Ben",
+    "desc": "Bugünkü farkındalığını 8 soruda 10 yıllık öncelik haritasına dönüştür.",
+    "cta": "Gelecekteki Ben’i Keşfet →"
   }
 }

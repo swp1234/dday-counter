@@ -124,6 +124,9 @@
   "featureList": "Unlimited event registration, D-Day countdown, repeat reminders, category management, LocalStorage saving, responsive design, multilingual support"
 }
 </script>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 </head>
 <body>
   <a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">Skip to main content</a>
@@ -311,7 +314,19 @@
     <canvas id="shareCanvas" width="1080" height="1920" style="display:none;"></canvas>
 
     <!-- Curated Planning Guides -->
-    <section id="curated-resources-card" class="curated-resources-card" aria-label="Mindful Time Horizon Guides"></section>
+            <section class="next-step-card" id="nextStepCard" aria-label="10-Year Future Self Archetype">
+            <p class="next-step-label" data-i18n="nextStep.label">Recommended Next Step</p>
+            <div class="next-step-main">
+                <span class="next-step-emoji" aria-hidden="true">🔮</span>
+                <div class="next-step-content">
+                    <h4 class="next-step-title" data-i18n="nextStep.title">10-Year Future Self Archetype</h4>
+                    <p class="next-step-desc" data-i18n="nextStep.desc">Turn today’s reflection into a 10-year roadmap of priorities and energy direction in 8 questions.</p>
+                </div>
+            </div>
+            <a href="/future-self/?lang=en&amp;start=1&amp;source=dday_counter_result" class="next-step-cta" id="nextStepCta" data-i18n="nextStep.cta">Explore Future Self →</a>
+        </section>
+
+<section id="curated-resources-card" class="curated-resources-card" aria-label="Mindful Time Horizon Guides"></section>
 
     <!-- 일정 인사이트 모달 -->
     <div class="premium-modal hidden" id="premiumModal" role="dialog" aria-modal="true" aria-labelledby="premiumModalTitle">
@@ -431,5 +446,35 @@
       </div>
     </div>
   <script src="/portal/js/cross-promo.js" defer></script>
+
+    <script>
+      (function () {
+        var cta = document.getElementById('nextStepCta');
+        if (!cta) return;
+        function syncHref() {
+          var lang = (window.i18n && (window.i18n.currentLang || (typeof window.i18n.getCurrentLanguage === 'function' && window.i18n.getCurrentLanguage())))
+            || new URLSearchParams(window.location.search).get('lang')
+            || document.documentElement.lang
+            || 'en';
+          try {
+            var u = new URL(cta.getAttribute('href'), window.location.origin);
+            u.searchParams.set('lang', lang);
+            u.searchParams.set('source', 'dday_counter_result');
+            cta.setAttribute('href', u.pathname + u.search);
+          } catch (e) {}
+        }
+        syncHref();
+        cta.addEventListener('click', function () {
+          syncHref();
+          if (typeof gtag === 'function') {
+            gtag('event', 'content_cta_click', {
+              cta_surface: 'next_step_hero',
+              destination: cta.getAttribute('href'),
+              source: 'dday_counter_result'
+            });
+          }
+        });
+      })();
+    </script>
 </body>
 </html>

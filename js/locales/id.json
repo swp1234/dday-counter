@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Arketipe Diri Masa Depan",
+    "desc": "Ubah refleksi hari ini menjadi peta prioritas 10 tahun dalam 8 pertanyaan.",
+    "cta": "Jelajahi Diri Masa Depan →"
   }
 }

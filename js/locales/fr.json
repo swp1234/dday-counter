@@ -172,5 +172,11 @@
         "url": "https://www.amazon.com/dp/0143126563?tag=dopabrain-20"
       }
     ]
+  },
+  "nextStep": {
+    "label": "Prochaine étape recommandée",
+    "title": "Archétype du Moi Futur (10 ans)",
+    "desc": "Reliez votre réflexion du jour à vos priorités sur 10 ans en 8 questions.",
+    "cta": "Explorer mon Moi Futur →"
   }
 }
